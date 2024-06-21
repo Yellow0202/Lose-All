@@ -34,12 +34,452 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 11
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10001
+    - Name: $v
+      Entry: 7
+      Data: 2|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10001
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_0
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10001
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10002
+    - Name: $v
+      Entry: 7
+      Data: 3|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10002
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_1
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10002
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10003
+    - Name: $v
+      Entry: 7
+      Data: 4|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10003
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_2
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10003
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10004
+    - Name: $v
+      Entry: 7
+      Data: 5|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10004
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_3
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10004
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10005
+    - Name: $v
+      Entry: 7
+      Data: 6|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10005
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_4
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10005
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10006
+    - Name: $v
+      Entry: 7
+      Data: 7|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10006
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_5
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10006
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10007
+    - Name: $v
+      Entry: 7
+      Data: 8|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10007
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_6
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10007
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10008
+    - Name: $v
+      Entry: 7
+      Data: 9|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10008
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_7
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10008
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10009
+    - Name: $v
+      Entry: 7
+      Data: 10|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10009
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_8
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10009
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10010
+    - Name: $v
+      Entry: 7
+      Data: 11|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10010
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_9
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10010
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_10011
+    - Name: $v
+      Entry: 7
+      Data: 12|Item_InfoData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_10011
+    - Name: Item_Rare
+      Entry: 3
+      Data: 1
+    - Name: Name
+      Entry: 1
+      Data: Item_Name_10
+    - Name: Comment
+      Entry: 1
+      Data: 
+    - Name: IntKey
+      Entry: 3
+      Data: 10011
+    - Name: Mess
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  dataArr: []
-  keyArr: []
+  dataArr:
+  - Key: Item_10001
+    Item_Rare: 1
+    Name: Item_Name_0
+    Comment: 
+    IntKey: 10001
+    Mess: 1
+  - Key: Item_10002
+    Item_Rare: 1
+    Name: Item_Name_1
+    Comment: 
+    IntKey: 10002
+    Mess: 1
+  - Key: Item_10003
+    Item_Rare: 1
+    Name: Item_Name_2
+    Comment: 
+    IntKey: 10003
+    Mess: 1
+  - Key: Item_10004
+    Item_Rare: 1
+    Name: Item_Name_3
+    Comment: 
+    IntKey: 10004
+    Mess: 1
+  - Key: Item_10005
+    Item_Rare: 1
+    Name: Item_Name_4
+    Comment: 
+    IntKey: 10005
+    Mess: 1
+  - Key: Item_10006
+    Item_Rare: 1
+    Name: Item_Name_5
+    Comment: 
+    IntKey: 10006
+    Mess: 1
+  - Key: Item_10007
+    Item_Rare: 1
+    Name: Item_Name_6
+    Comment: 
+    IntKey: 10007
+    Mess: 1
+  - Key: Item_10008
+    Item_Rare: 1
+    Name: Item_Name_7
+    Comment: 
+    IntKey: 10008
+    Mess: 1
+  - Key: Item_10009
+    Item_Rare: 1
+    Name: Item_Name_8
+    Comment: 
+    IntKey: 10009
+    Mess: 1
+  - Key: Item_10010
+    Item_Rare: 1
+    Name: Item_Name_9
+    Comment: 
+    IntKey: 10010
+    Mess: 1
+  - Key: Item_10011
+    Item_Rare: 1
+    Name: Item_Name_10
+    Comment: 
+    IntKey: 10011
+    Mess: 1
+  keyArr:
+  - Item_10001
+  - Item_10002
+  - Item_10003
+  - Item_10004
+  - Item_10005
+  - Item_10006
+  - Item_10007
+  - Item_10008
+  - Item_10009
+  - Item_10010
+  - Item_10011

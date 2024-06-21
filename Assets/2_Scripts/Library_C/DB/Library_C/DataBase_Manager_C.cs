@@ -37,6 +37,17 @@ public partial class DataBase_Manager : Cargold.FrameWork.DataBase_Manager
             return this.item_Info;
         }
     }
+    [InlineEditor, LabelText("Item_RarePersent"), SerializeField] private DB_Item_RarePersentDataGroup item_RarePersent;
+    public DB_Item_RarePersentDataGroup GetItem_RarePersent
+    {
+        get
+        {
+            if (this.item_RarePersent == null)
+                this.item_RarePersent = Resources.Load<DB_Item_RarePersentDataGroup>(base.dataGroupSobjPath + "DB_Item_RarePersentDataGroup");
+
+            return this.item_RarePersent;
+        }
+    }
     [InlineEditor, LabelText("Localize"), SerializeField] private DB_LocalizeDataGroup localize;
     public DB_LocalizeDataGroup GetLocalize
     {
@@ -77,6 +88,7 @@ public partial class DataBase_Manager : Cargold.FrameWork.DataBase_Manager
 
             
             this.item_Info.Init_Func();
+            this.item_RarePersent.Init_Func();
             this.localize.Init_Func();
             this.table_Define.Init_Func();
         }
@@ -86,6 +98,7 @@ public partial class DataBase_Manager : Cargold.FrameWork.DataBase_Manager
     public override void CallEdit_OnDataImport_Func(bool _isDataImport = true)
     {
         this.GetItem_Info.CallEdit_OnDataImportDone_Func();
+        this.GetItem_RarePersent.CallEdit_OnDataImportDone_Func();
         this.GetLocalize.CallEdit_OnDataImportDone_Func();
         this.GetTable_Define.CallEdit_OnDataImportDone_Func();
         

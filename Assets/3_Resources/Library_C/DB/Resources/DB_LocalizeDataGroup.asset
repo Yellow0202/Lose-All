@@ -34,12 +34,452 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 11
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_0
+    - Name: $v
+      Entry: 7
+      Data: 2|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_0
+    - Name: ko
+      Entry: 1
+      Data: "\uC5F0\uB450\uC0C9\uACF5\uB8E1"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_1
+    - Name: $v
+      Entry: 7
+      Data: 3|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_1
+    - Name: ko
+      Entry: 1
+      Data: "\uC9C4\uB3D7\uAC1C"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_2
+    - Name: $v
+      Entry: 7
+      Data: 4|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_2
+    - Name: ko
+      Entry: 1
+      Data: "\uCF54\uB07C\uB9AC\uB543\uC950"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_3
+    - Name: $v
+      Entry: 7
+      Data: 5|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_3
+    - Name: ko
+      Entry: 1
+      Data: "\uD584\uC2A4\uD130"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_4
+    - Name: $v
+      Entry: 7
+      Data: 6|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_4
+    - Name: ko
+      Entry: 1
+      Data: "\uACE0\uC2B4\uB3C4\uCE58"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_5
+    - Name: $v
+      Entry: 7
+      Data: 7|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_5
+    - Name: ko
+      Entry: 1
+      Data: "\uD558\uB298\uC0C9\uBA38\uB9AC \uC5EC\uCE90"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_6
+    - Name: $v
+      Entry: 7
+      Data: 8|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_6
+    - Name: ko
+      Entry: 1
+      Data: "\uAC74\uB2F4"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_7
+    - Name: $v
+      Entry: 7
+      Data: 9|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_7
+    - Name: ko
+      Entry: 1
+      Data: "\uBBFC\uD2B8 \uBA38\uB9AC \uC5EC\uCE90"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_8
+    - Name: $v
+      Entry: 7
+      Data: 10|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_8
+    - Name: ko
+      Entry: 1
+      Data: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_9
+    - Name: $v
+      Entry: 7
+      Data: 11|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_9
+    - Name: ko
+      Entry: 1
+      Data: "\uC695\uB9DD\uC758\uD56D\uC544\uB9AC"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Item_Name_10
+    - Name: $v
+      Entry: 7
+      Data: 12|LocalizeData, Assembly-CSharp
+    - Name: Key
+      Entry: 1
+      Data: Item_Name_10
+    - Name: ko
+      Entry: 1
+      Data: "\uB3CC\uD558\uB974\uBC29(?)"
+    - Name: en
+      Entry: 1
+      Data: 
+    - Name: Jp
+      Entry: 1
+      Data: 
+    - Name: Ch
+      Entry: 1
+      Data: 
+    - Name: TW
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  dataArr: []
-  keyArr: []
+  dataArr:
+  - Key: Item_Name_0
+    ko: "\uC5F0\uB450\uC0C9\uACF5\uB8E1"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_1
+    ko: "\uC9C4\uB3D7\uAC1C"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_2
+    ko: "\uCF54\uB07C\uB9AC\uB543\uC950"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_3
+    ko: "\uD584\uC2A4\uD130"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_4
+    ko: "\uACE0\uC2B4\uB3C4\uCE58"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_5
+    ko: "\uD558\uB298\uC0C9\uBA38\uB9AC \uC5EC\uCE90"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_6
+    ko: "\uAC74\uB2F4"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_7
+    ko: "\uBBFC\uD2B8 \uBA38\uB9AC \uC5EC\uCE90"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_8
+    ko: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_9
+    ko: "\uC695\uB9DD\uC758\uD56D\uC544\uB9AC"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  - Key: Item_Name_10
+    ko: "\uB3CC\uD558\uB974\uBC29(?)"
+    en: 
+    Jp: 
+    Ch: 
+    TW: 
+  keyArr:
+  - Item_Name_0
+  - Item_Name_1
+  - Item_Name_2
+  - Item_Name_3
+  - Item_Name_4
+  - Item_Name_5
+  - Item_Name_6
+  - Item_Name_7
+  - Item_Name_8
+  - Item_Name_9
+  - Item_Name_10

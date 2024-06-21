@@ -29,5 +29,6 @@ MonoBehaviour:
   isCatched: 1
   printLogType: 1073741824
   item_Info: {fileID: 11400000, guid: 6b26610908722084aa1f2d610fd94a74, type: 2}
+  item_RarePersent: {fileID: 11400000, guid: a80e9079ae1a8944b9351d786392e047, type: 2}
   localize: {fileID: 11400000, guid: 76c9d1acd2f1f72448c13fdce9b4ce5f, type: 2}
   table_Define: {fileID: 11400000, guid: 69ffe7deb4d57a64c88cc07e1c88b168, type: 2}

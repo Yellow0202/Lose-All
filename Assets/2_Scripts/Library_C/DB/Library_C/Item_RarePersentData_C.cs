@@ -8,14 +8,11 @@ using Cargold.DB.TableImporter;
 // 카라리 테이블 임포터에 의해 생성된 스크립트입니다.
 
 [System.Serializable]
-public partial class Item_InfoData : Data_C
+public partial class Item_RarePersentData : Data_C
 {
      public string Key;
      [LabelText("레어도")] public Rare Item_Rare;
-     [LabelText("이름")] public string Name;
-     [LabelText("아이템 설명")] public string Comment;
-     [LabelText("아이템 인트 키")] public int IntKey;
-     [LabelText("아이템 무게")] public float Mess;
+     [LabelText("확률")] public float Item_Persent;
 
     
 
@@ -24,10 +21,7 @@ public partial class Item_InfoData : Data_C
     {
         Key = _cellDataArr[0];
         Item_Rare = _cellDataArr[1].ToEnum<Rare>();
-        Name = _cellDataArr[2];
-        Comment = _cellDataArr[3];
-        IntKey = _cellDataArr[4].ToInt();
-        Mess = _cellDataArr[5].ToFloat();
+        Item_Persent = _cellDataArr[2].ToFloat();
     }
 #endif
 }
