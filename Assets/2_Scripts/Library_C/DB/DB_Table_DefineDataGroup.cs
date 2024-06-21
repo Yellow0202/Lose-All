@@ -9,6 +9,10 @@ using Cargold.DB.TableImporter;
 
 public partial class DB_Table_DefineDataGroup
 {
+    [SerializeField, FoldoutGroup("아이템 생성 정보"), LabelText("아이템 낙하 값")] private float _item_Falling_Speed; public float item_Falling_Speed => this._item_Falling_Speed;
+    [SerializeField, FoldoutGroup("아이템 생성 정보"), LabelText("아이템 생성 시간")] private float _item_Spawn_CoolTime; public float item_Spawn_CoolTime => this._item_Spawn_CoolTime;
+    [SerializeField, FoldoutGroup("아이템 생성 정보"), LabelText("아이템 최대 생성 갯수")] private int _item_Spawn_Count; public int item_Spawn_Count => this._item_Spawn_Count;
+
     protected override void Init_Project_Func()
     {
         base.Init_Project_Func();

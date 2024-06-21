@@ -115,3 +115,6 @@ MonoBehaviour:
   - Define_1
   - Define_2
   - Define_3
+  _item_Falling_Speed: 0
+  _item_Spawn_CoolTime: 50
+  _item_Spawn_Count: 0
