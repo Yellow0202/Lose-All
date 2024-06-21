@@ -55,10 +55,13 @@ MonoBehaviour:
       Data: Item_Name_0
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uBA38\uADF8\uCEF5"
     - Name: IntKey
       Entry: 3
       Data: 10001
+    - Name: ItemScore
+      Entry: 3
+      Data: 1500
     - Name: Mess
       Entry: 4
       Data: 1
@@ -88,13 +91,16 @@ MonoBehaviour:
       Data: Item_Name_1
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uC5F0\uB450\uC0C9 \uACF5\uB8E1"
     - Name: IntKey
       Entry: 3
       Data: 10002
+    - Name: ItemScore
+      Entry: 3
+      Data: 2700
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 0.8
     - Name: 
       Entry: 8
       Data: 
@@ -121,13 +127,16 @@ MonoBehaviour:
       Data: Item_Name_2
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uC9C4\uB3D7\uAC1C"
     - Name: IntKey
       Entry: 3
       Data: 10003
+    - Name: ItemScore
+      Entry: 3
+      Data: 3500
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 0.9
     - Name: 
       Entry: 8
       Data: 
@@ -154,13 +163,16 @@ MonoBehaviour:
       Data: Item_Name_3
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uCF54\uB07C\uB9AC\uB543\uC950"
     - Name: IntKey
       Entry: 3
       Data: 10004
+    - Name: ItemScore
+      Entry: 3
+      Data: 4500
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 0.9
     - Name: 
       Entry: 8
       Data: 
@@ -187,13 +199,16 @@ MonoBehaviour:
       Data: Item_Name_4
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uD584\uC2A4\uD130"
     - Name: IntKey
       Entry: 3
       Data: 10005
+    - Name: ItemScore
+      Entry: 3
+      Data: 5600
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 1.4
     - Name: 
       Entry: 8
       Data: 
@@ -220,13 +235,16 @@ MonoBehaviour:
       Data: Item_Name_5
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uACE0\uC2B4\uB3C4\uCE58"
     - Name: IntKey
       Entry: 3
       Data: 10006
+    - Name: ItemScore
+      Entry: 3
+      Data: 6300
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -253,13 +271,16 @@ MonoBehaviour:
       Data: Item_Name_6
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uAC74\uB2F4"
     - Name: IntKey
       Entry: 3
       Data: 10007
+    - Name: ItemScore
+      Entry: 3
+      Data: 7700
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 1.5
     - Name: 
       Entry: 8
       Data: 
@@ -286,13 +307,16 @@ MonoBehaviour:
       Data: Item_Name_7
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uBBFC\uD2B8\uBA38\uB9AC\uC5EC\uCE90"
     - Name: IntKey
       Entry: 3
       Data: 10008
+    - Name: ItemScore
+      Entry: 3
+      Data: 9900
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 1.3
     - Name: 
       Entry: 8
       Data: 
@@ -319,13 +343,16 @@ MonoBehaviour:
       Data: Item_Name_8
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uD558\uB298\uBA38\uB9AC\uC5EC\uCE90"
     - Name: IntKey
       Entry: 3
       Data: 10009
+    - Name: ItemScore
+      Entry: 3
+      Data: 11800
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 1.8
     - Name: 
       Entry: 8
       Data: 
@@ -352,13 +379,16 @@ MonoBehaviour:
       Data: Item_Name_9
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
     - Name: IntKey
       Entry: 3
       Data: 10010
+    - Name: ItemScore
+      Entry: 3
+      Data: -6000
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -385,13 +415,16 @@ MonoBehaviour:
       Data: Item_Name_10
     - Name: Comment
       Entry: 1
-      Data: 
+      Data: "\uAC8C\uC784\uD328\uB4DC"
     - Name: IntKey
       Entry: 3
       Data: 10011
+    - Name: ItemScore
+      Entry: 3
+      Data: 50000
     - Name: Mess
       Entry: 4
-      Data: 1
+      Data: 1.5
     - Name: 
       Entry: 8
       Data: 
@@ -408,69 +441,80 @@ MonoBehaviour:
   - Key: Item_10001
     Item_Rare: 1
     Name: Item_Name_0
-    Comment: 
+    Comment: "\uBA38\uADF8\uCEF5"
     IntKey: 10001
+    ItemScore: 1500
     Mess: 1
   - Key: Item_10002
     Item_Rare: 1
     Name: Item_Name_1
-    Comment: 
+    Comment: "\uC5F0\uB450\uC0C9 \uACF5\uB8E1"
     IntKey: 10002
-    Mess: 1
+    ItemScore: 2700
+    Mess: 0.8
   - Key: Item_10003
     Item_Rare: 1
     Name: Item_Name_2
-    Comment: 
+    Comment: "\uC9C4\uB3D7\uAC1C"
     IntKey: 10003
-    Mess: 1
+    ItemScore: 3500
+    Mess: 0.9
   - Key: Item_10004
     Item_Rare: 1
     Name: Item_Name_3
-    Comment: 
+    Comment: "\uCF54\uB07C\uB9AC\uB543\uC950"
     IntKey: 10004
-    Mess: 1
+    ItemScore: 4500
+    Mess: 0.9
   - Key: Item_10005
     Item_Rare: 1
     Name: Item_Name_4
-    Comment: 
+    Comment: "\uD584\uC2A4\uD130"
     IntKey: 10005
-    Mess: 1
+    ItemScore: 5600
+    Mess: 1.4
   - Key: Item_10006
     Item_Rare: 1
     Name: Item_Name_5
-    Comment: 
+    Comment: "\uACE0\uC2B4\uB3C4\uCE58"
     IntKey: 10006
-    Mess: 1
+    ItemScore: 6300
+    Mess: 2
   - Key: Item_10007
     Item_Rare: 1
     Name: Item_Name_6
-    Comment: 
+    Comment: "\uAC74\uB2F4"
     IntKey: 10007
-    Mess: 1
+    ItemScore: 7700
+    Mess: 1.5
   - Key: Item_10008
     Item_Rare: 2
     Name: Item_Name_7
-    Comment: 
+    Comment: "\uBBFC\uD2B8\uBA38\uB9AC\uC5EC\uCE90"
     IntKey: 10008
-    Mess: 1
+    ItemScore: 9900
+    Mess: 1.3
   - Key: Item_10009
     Item_Rare: 2
     Name: Item_Name_8
-    Comment: 
+    Comment: "\uD558\uB298\uBA38\uB9AC\uC5EC\uCE90"
     IntKey: 10009
-    Mess: 1
+    ItemScore: 11800
+    Mess: 1.8
   - Key: Item_10010
     Item_Rare: 2
     Name: Item_Name_9
-    Comment: 
+    Comment: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
     IntKey: 10010
-    Mess: 1
+    ItemScore: -6000
+    Mess: 2
   - Key: Item_10011
     Item_Rare: 3
     Name: Item_Name_10
-    Comment: 
+    Comment: "\uAC8C\uC784\uD328\uB4DC"
     IntKey: 10011
-    Mess: 1
+    ItemScore: 50000
+    Mess: 1.5
   keyArr:
   - Item_10001
   - Item_10002

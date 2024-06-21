@@ -15,6 +15,7 @@ public partial class Item_InfoData : Data_C
      [LabelText("이름")] public string Name;
      [LabelText("아이템 설명")] public string Comment;
      [LabelText("아이템 인트 키")] public int IntKey;
+     [LabelText("아이템 스코어")] public int ItemScore;
      [LabelText("아이템 무게")] public float Mess;
 
     
@@ -27,7 +28,8 @@ public partial class Item_InfoData : Data_C
         Name = _cellDataArr[2];
         Comment = _cellDataArr[3];
         IntKey = _cellDataArr[4].ToInt();
-        Mess = _cellDataArr[5].ToFloat();
+        ItemScore = _cellDataArr[5].ToInt();
+        Mess = _cellDataArr[6].ToFloat();
     }
 #endif
 }
