@@ -25,7 +25,7 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
         }
         else if (_layer == 2)
         {
-            this.Start_ItemSpawn_Func();
+
         }
     }
 
@@ -42,7 +42,8 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
 
     private IEnumerator ItemSpawn_Cor()
     {
-        while(true)
+
+        while (true)
         {
             if(this._curItemSpawnTime < DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime)
                 this._curItemSpawnTime += Time.deltaTime;
@@ -55,11 +56,15 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
                 float a_Persent = Random.Range(0, 100.0f);
                 Item_InfoData a_ItemData = this.Get_ItemRareToItemData_Func(a_Persent);
 
-                Debug.Log("a_ItemData Name : " + a_ItemData.Name);
+                //대상 스폰 위치 지정
+                Vector2 a_SpawnVec = Vector2.zero;
+
+                a_SpawnVec.x = Random.Range(-8.0f, 8.0f);
+                a_SpawnVec.y = 4.5f;
 
                 //아이템 소환
                 ItemPooling_Script _ItemPrefab = PoolingSystem_Manager.Instance.Spawn_Func<ItemPooling_Script>(PoolingKey.ItempPoolingKey);
-                _ItemPrefab.Setting_Func(null);
+                _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
             }
 
             yield return null;

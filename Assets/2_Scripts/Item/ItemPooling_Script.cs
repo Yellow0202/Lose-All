@@ -24,9 +24,13 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
 
     }
 
-    public void Setting_Func(Item_InfoData a_ItemData)
+    public void Setting_Func(Item_InfoData a_ItemData, Vector2 a_SpawnPos)
     {
         this._myData = a_ItemData;
+
+        this.gameObject.SetActive(true);
+        this.transform.SetParent(InGameUISystem_Manager.Instance.itemSpawnPoint);
+        this.transform.position = a_SpawnPos;
     }
 
     private void Delete_Func()

@@ -61,7 +61,7 @@ public partial class DB_Item_RarePersentDataGroup
             }
         }
 
-        return Rare.None;
+        return Rare.N;
     }
 
 #if UNITY_EDITOR
