@@ -280,7 +280,7 @@ MonoBehaviour:
       Data: Item_10008
     - Name: Item_Rare
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: Name
       Entry: 1
       Data: Item_Name_7
@@ -313,7 +313,7 @@ MonoBehaviour:
       Data: Item_10009
     - Name: Item_Rare
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: Name
       Entry: 1
       Data: Item_Name_8
@@ -346,7 +346,7 @@ MonoBehaviour:
       Data: Item_10010
     - Name: Item_Rare
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: Name
       Entry: 1
       Data: Item_Name_9
@@ -379,7 +379,7 @@ MonoBehaviour:
       Data: Item_10011
     - Name: Item_Rare
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: Name
       Entry: 1
       Data: Item_Name_10
@@ -448,25 +448,25 @@ MonoBehaviour:
     IntKey: 10007
     Mess: 1
   - Key: Item_10008
-    Item_Rare: 1
+    Item_Rare: 2
     Name: Item_Name_7
     Comment: 
     IntKey: 10008
     Mess: 1
   - Key: Item_10009
-    Item_Rare: 1
+    Item_Rare: 2
     Name: Item_Name_8
     Comment: 
     IntKey: 10009
     Mess: 1
   - Key: Item_10010
-    Item_Rare: 1
+    Item_Rare: 2
     Name: Item_Name_9
     Comment: 
     IntKey: 10010
     Mess: 1
   - Key: Item_10011
-    Item_Rare: 1
+    Item_Rare: 3
     Name: Item_Name_10
     Comment: 
     IntKey: 10011
