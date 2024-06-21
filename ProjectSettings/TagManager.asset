@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Guard
+  - Figures
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Figures
   - Water
   - UI
   - 
