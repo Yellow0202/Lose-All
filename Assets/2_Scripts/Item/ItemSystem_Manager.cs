@@ -52,19 +52,24 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
             {
                 this._curItemSpawnTime = 0.0f;
 
-                //확률 대상 지정
-                float a_Persent = Random.Range(0, 100.0f);
-                Item_InfoData a_ItemData = this.Get_ItemRareToItemData_Func(a_Persent);
+                if (this._curItemSpawnCount < DataBase_Manager.Instance.GetTable_Define.item_Spawn_Count)
+                {
+                    //확률 대상 지정
+                    float a_Persent = Random.Range(0, 100.0f);
+                    Item_InfoData a_ItemData = this.Get_ItemRareToItemData_Func(a_Persent);
 
-                //대상 스폰 위치 지정
-                Vector2 a_SpawnVec = Vector2.zero;
+                    //대상 스폰 위치 지정
+                    Vector2 a_SpawnVec = Vector2.zero;
 
-                a_SpawnVec.x = Random.Range(-8.0f, 8.0f);
-                a_SpawnVec.y = 4.5f;
+                    a_SpawnVec.x = Random.Range(-8.0f, 8.0f);
+                    a_SpawnVec.y = 4.5f;
 
-                //아이템 소환
-                ItemPooling_Script _ItemPrefab = PoolingSystem_Manager.Instance.Spawn_Func<ItemPooling_Script>(PoolingKey.ItempPoolingKey);
-                _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
+                    //아이템 소환
+                    ItemPooling_Script _ItemPrefab = PoolingSystem_Manager.Instance.Spawn_Func<ItemPooling_Script>(PoolingKey.ItempPoolingKey);
+                    _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
+
+                    this._curItemSpawnCount++;
+                }
             }
 
             yield return null;
@@ -78,7 +83,7 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
         return DataBase_Manager.Instance.GetItem_Info.Get_ItemRareToItemInfoDataListDataDic_Func(a_ItemRare);
     }
 
-    private void Set_CountDown_Func()
+    public void Set_CountDown_Func()
     {
         this._curItemSpawnCount--;
 

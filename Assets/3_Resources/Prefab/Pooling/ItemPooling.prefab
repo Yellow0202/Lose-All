@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemIcon: {fileID: 0}
+  _itemRid: {fileID: -1243723515766337542}
 --- !u!50 &-1243723515766337542
 Rigidbody2D:
   serializedVersion: 4
