@@ -3351,7 +3351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chtchPointTr: {fileID: 1764983578}
   _playerSpriteRenderer: {fileID: 494795611}
-  _moveboost: 50
+  _moveboost: 75
 --- !u!50 &1453202515
 Rigidbody2D:
   serializedVersion: 4

@@ -36,8 +36,6 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         this.transform.position = a_SpawnPos;
         this.transform.localScale = _itemScale;
 
-        //this._itemCheckPointTr = 
-
         //아이템 이미지 변경
         this._itemSpriteRenderer.sprite = ItemSystem_Manager.Instance.Get_ItemIntKeyToSprite_Func(this._myData.IntKey);
 
@@ -51,7 +49,6 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             Vector2 a_StartMoveVec = Vector2.zero;
             a_StartMoveVec.x = Random.Range(-3, 4);
             a_StartMoveVec.y = 5;
-
 
             this._itemRid.velocity = a_StartMoveVec;
         }

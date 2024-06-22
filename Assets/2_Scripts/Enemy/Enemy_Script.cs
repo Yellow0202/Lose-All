@@ -49,10 +49,11 @@ public class Enemy_Script : MonoBehaviour
     private IEnumerator ItemSpawn_Cor()
     {
         this._curSpawnaTime = 0;
+        float a_Plustime = this.Random_SpawnTime_Func();
 
-        while(true)
+        while (true)
         {
-            if (DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime <= _curSpawnaTime)
+            if (DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime + a_Plustime <= _curSpawnaTime)
             {
                 //동작을 취함.
                 //던지고 마무리에 아이템 생성.
@@ -60,6 +61,7 @@ public class Enemy_Script : MonoBehaviour
 
                 this._curSpawnaTime = 0.0f;
                 this._horizontal = 0.0f;
+                a_Plustime = this.Random_SpawnTime_Func();
 
                 this.is_Up = Random.Range(0, 2) == 0 ? true : false;
 
@@ -73,6 +75,11 @@ public class Enemy_Script : MonoBehaviour
         }
 
         yield return null;
+    }
+
+    private float Random_SpawnTime_Func()
+    {
+        return Random.Range(0.1f, 0.3f);
     }
 
     public void Spawn_ItemSpawn_Func()

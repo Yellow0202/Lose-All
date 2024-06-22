@@ -28,6 +28,7 @@ public partial struct BgmType
     
     public const int 인게임BGMLoop = 1;
     public const int 타이틀BGM = 2;
+    public const int 인게임BGMintro = 3;
 
 #if UNITY_EDITOR
     private IEnumerable GetIEnumerable => BgmTypeSobj.Instance.GetIEnumerable;

@@ -29,7 +29,6 @@ public partial struct SfxType
     public const int 떨어지는효과음 = 1;
     public const int 유령 = 2;
     public const int 굿 = 3;
-    public const int 인게임BGMintro = 4;
     public const int 터치음 = 5;
     public const int 퍼펙트 = 6;
     public const int 함정카드 = 7;
