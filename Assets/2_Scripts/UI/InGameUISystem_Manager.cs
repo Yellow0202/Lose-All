@@ -22,6 +22,6 @@ public class InGameUISystem_Manager : MonoBehaviour
 
     private void Start_ManagerFuncs_Func()
     {
-        ItemSystem_Manager.Instance.Start_ItemSpawn_Func();
+        //ItemSystem_Manager.Instance.Start_ItemSpawn_Func();
     }
 }

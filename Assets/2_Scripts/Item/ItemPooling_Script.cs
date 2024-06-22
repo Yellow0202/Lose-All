@@ -33,8 +33,16 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         this.transform.SetParent(InGameUISystem_Manager.Instance.itemSpawnPoint);
         this.transform.position = a_SpawnPos;
 
+        //지정된 리지드바디 값 추가
         this._itemRid.mass = a_ItemData.Mess;
         this._itemRid.gravityScale = DataBase_Manager.Instance.GetTable_Define.item_Falling_Speed;
+
+        //스폰시 살짝 위로 올라가야함.
+        Vector2 a_StartMoveVec = Vector2.zero;
+        a_StartMoveVec.x = Random.Range(-3, 4);
+        a_StartMoveVec.y = 5;
+
+        this._itemRid.velocity = a_StartMoveVec;
     }
 
     private void Delete_Func(bool is_Player = false)
@@ -57,6 +65,10 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             this.Delete_Func(true);
         }
         else if(coll.gameObject.tag == "Guard")
+        {
+            //벽에 부딪혔을 경우 어떻게할까?
+        }
+        else if(coll.gameObject.tag == "DownGuard")
         {
             this.Delete_Func();
         }

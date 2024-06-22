@@ -118,3 +118,4 @@ MonoBehaviour:
   _item_Falling_Speed: 1
   _item_Spawn_CoolTime: 1
   _item_Spawn_Count: 2
+  _enemy_MoveSpeed: 5

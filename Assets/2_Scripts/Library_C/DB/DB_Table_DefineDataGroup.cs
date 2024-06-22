@@ -13,6 +13,8 @@ public partial class DB_Table_DefineDataGroup
     [SerializeField, FoldoutGroup("아이템 생성 정보"), LabelText("아이템 생성 시간")] private float _item_Spawn_CoolTime; public float item_Spawn_CoolTime => this._item_Spawn_CoolTime;
     [SerializeField, FoldoutGroup("아이템 생성 정보"), LabelText("아이템 최대 생성 갯수")] private int _item_Spawn_Count; public int item_Spawn_Count => this._item_Spawn_Count;
 
+    [SerializeField, FoldoutGroup("사촌동생 정보"), LabelText("사촌동생 이동속도")] private float _enemy_MoveSpeed; public float enemy_MoveSpeed => this._enemy_MoveSpeed;
+
     protected override void Init_Project_Func()
     {
         base.Init_Project_Func();

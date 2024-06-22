@@ -29,15 +29,21 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
         }
     }
 
-    public void Start_ItemSpawn_Func()
+    public void Start_ItemSpawn_Func(Vector2 a_SpawnVec)
     {
-        this.ItemSpawn_Func();
+        this.ItemSpawn_Func(a_SpawnVec);
     }
 
-    private void ItemSpawn_Func()
+    private void ItemSpawn_Func(Vector2 a_SpawnVec)
     {
-        this._curItemSpawnTime = DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime;
-        this._itemSpawnCorData.StartCoroutine_Func(ItemSpawn_Cor(), CoroutineStartType.StartWhenStop);
+        float a_Persent = Random.Range(0, 100.0f);
+        Item_InfoData a_ItemData = this.Get_ItemRareToItemData_Func(a_Persent);
+
+        //아이템 소환
+        ItemPooling_Script _ItemPrefab = PoolingSystem_Manager.Instance.Spawn_Func<ItemPooling_Script>(PoolingKey.ItempPoolingKey);
+        _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
+
+        this._curItemSpawnCount++;
     }
 
     private IEnumerator ItemSpawn_Cor()
