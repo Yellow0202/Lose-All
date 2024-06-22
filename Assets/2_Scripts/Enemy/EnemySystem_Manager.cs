@@ -29,6 +29,7 @@ public class EnemySystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Ga
         }
     }
 
+    [Button("사촌 소환")]
     public void Spawn_EnemyCharactor_Func()
     {   //사촌동생 소환.
         GameObject a_NewEnemy = GameObject.Instantiate(_enemyPrefab);

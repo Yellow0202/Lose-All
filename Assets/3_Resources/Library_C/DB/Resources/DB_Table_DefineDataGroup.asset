@@ -120,3 +120,4 @@ MonoBehaviour:
   _item_Spawn_Count: 2
   _enemy_MoveSpeed: 5
   _enemy_SpawnCondition: 100000
+  _enemy_StopTime: 0.25

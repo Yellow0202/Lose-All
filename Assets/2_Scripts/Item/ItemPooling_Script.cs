@@ -60,8 +60,14 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
 
         if(is_Player == true)
         {
+            InGameUiAnim_Script.Instance.Call_ItemAnim_Func(this._myData.IntKey);
+
             UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(this._myData.ItemScore);
             EnemySystem_Manager.Instance.Check_EnemySpawnCondition_Func();
+
+            //true가 나왔다는 건 캐치로 아이템을 얻었다는 것.
+            //그럼 아이템과 플레이어 캐치 부분의 겹침
+            this.Check_PositionDistance_Func();
         }
         else
         {
@@ -69,6 +75,12 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         }
 
         ItemSystem_Manager.Instance.Set_CountDown_Func();
+    }
+
+    private void Check_PositionDistance_Func()
+    {
+        float a_Distance = 0.0f;
+        a_Distance = Vector2.Distance(this.transform.position, PlayerSystem_Manager.Instance.playerMoveScript.Get_ChtchPointTr_Func().position);
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
@@ -87,7 +99,6 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
     {
         if (coll.gameObject.tag == "CatchPoint")
         {
-            Debug.Log("호출");
             this.Delete_Func(true);
         }
     }
