@@ -67,6 +67,7 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             InGameUiAnim_Script.Instance.Call_ItemAnim_Func(this._myData.IntKey);
 
             UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(this._myData.ItemScore);
+            EnemySystem_Manager.Instance.Check_CurGetScoreToItemCoolTimeDown_Func(this._myData.ItemScore);
             EnemySystem_Manager.Instance.Check_EnemySpawnCondition_Func();
 
             //true가 나왔다는 건 캐치로 아이템을 얻었다는 것.
@@ -89,6 +90,8 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             {
                 SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.소름2);
             }
+
+            //플레이어 캐치 실패 UI 출력
         }
 
         ItemSystem_Manager.Instance.Set_CountDown_Func();
@@ -98,6 +101,18 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
     {
         float a_Distance = 0.0f;
         a_Distance = Vector2.Distance(this.transform.position, PlayerSystem_Manager.Instance.playerMoveScript.Get_ChtchPointTr_Func().position);
+
+        if(a_Distance <= DataBase_Manager.Instance.GetTable_Define.chtch_PerpectPersent)
+        {
+            //퍼펙트 UI 출력
+            SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.퍼펙트);
+        }
+        else
+        {
+            //굿 UI 출력
+            SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.굿);
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
