@@ -28,9 +28,9 @@ public class UI_Result : MonoSingleton<UI_Result>
     public UI_Result_RankingSlot[] RankingSlots { get => rankingSlots; }
 
     // Start is called before the first frame update
-    override protected void Start()
+    override protected void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
     }
 
     // Update is called once per frame

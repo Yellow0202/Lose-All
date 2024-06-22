@@ -14,9 +14,9 @@ public class UI_Title : MonoSingleton<UI_Title>
     public Button Button_Exit { get => button_Exit; }
 
     // Start is called before the first frame update
-    override protected void Start()
+    override protected void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
     }
 
     // Update is called once per frame

@@ -16,9 +16,9 @@ public class UI_Name : MonoSingleton<UI_Name>
     public InputField InputField_Name { get => inputField_Name; }
 
     // Start is called before the first frame update
-    override protected void Start()
+    override protected void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
     }
 
     // Update is called once per frame
