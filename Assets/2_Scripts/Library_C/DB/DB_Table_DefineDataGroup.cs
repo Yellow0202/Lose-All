@@ -15,6 +15,7 @@ public partial class DB_Table_DefineDataGroup
 
     [SerializeField, FoldoutGroup("사촌동생 정보"), LabelText("사촌동생 이동속도")] private float _enemy_MoveSpeed; public float enemy_MoveSpeed => this._enemy_MoveSpeed;
     [SerializeField, FoldoutGroup("사촌동생 정보"), LabelText("사촌동생 생성 조건")] private int _enemy_SpawnCondition; public int enemy_SpawnCondition => this._enemy_SpawnCondition;
+    [SerializeField, FoldoutGroup("사촌동생 정보"), LabelText("사촌동생 멈춤 시간")] private float _enemy_StopTime; public float enemy_StopTime => this._enemy_StopTime;
 
     protected override void Init_Project_Func()
     {

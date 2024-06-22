@@ -102,7 +102,7 @@ MonoBehaviour:
   _itemSpriteRenderer: {fileID: 239794701868550422}
   _itemRid: {fileID: -1243723515766337542}
   _itemCheckPointTr: {fileID: 0}
-  _itemScale: {x: 0.35, y: 0.3, z: 0.3}
+  _itemScale: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!58 &239794701868550423
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class PlayerSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.G
 {
     public static PlayerSystem_Manager Instance;
 
-    [SerializeField, LabelText("플레이어 이동 스크립트")] private PlayerMove_Script _playerMoveScript;
+    [SerializeField, LabelText("플레이어 이동 스크립트")] private PlayerMove_Script _playerMoveScript; public PlayerMove_Script playerMoveScript => this._playerMoveScript;
 
     [SerializeField, FoldoutGroup("플레이어 정보"), LabelText("플레이어 이동속도")] private float _player_MoveSpeed; public float player_MoveSpeed => this._player_MoveSpeed;
 

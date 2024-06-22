@@ -5,13 +5,14 @@ using Sirenix.OdinInspector;
 
 public class PlayerMove_Script : MonoBehaviour
 {
+    [SerializeField, LabelText("캐치포인트 오브젝트")] private Transform _chtchPointTr;
+
     [LabelText("캐릭터 리지드바디")] private Rigidbody2D _rigid;
 
     [LabelText("플레이어 이동속독")] private float _moveSpeed => PlayerSystem_Manager.Instance.player_MoveSpeed;
     [LabelText("좌우 입력키 방향값")] private float _horizontal;
     [LabelText("플레이어 이동 방향 벡터")] private Vector2 _playerMoveInput;
     [LabelText("플레이어 이동 방향 벡터 * 스피드")] private Vector2 _playerMoveVelocity;
-
     public void Start_PlayerMove_Func()
     {
         this._rigid = gameObject.GetComponent<Rigidbody2D>();
@@ -57,5 +58,10 @@ public class PlayerMove_Script : MonoBehaviour
         //애니메이션 변경 얼마 후 다시 돌아옴
 
         //버튼 눌렀을 때 판정 범위 내 오브젝트가 닿았는지 여부를 파악해야 함.
+    }
+
+    public Transform Get_ChtchPointTr_Func()
+    {
+        return this._chtchPointTr;
     }
 }
