@@ -25,6 +25,9 @@ public partial class DB_Table_DefineDataGroup
     [SerializeField, FoldoutGroup("난이도 상승"), LabelText("아이템 생성 시간 감소 조건 금액(시작가)")] private int _difficulty_SpawnCoolTimeDownCondition; public int difficulty_SpawnCoolTimeDownCondition => this._difficulty_SpawnCoolTimeDownCondition;
     [SerializeField, FoldoutGroup("난이도 상승"), LabelText("아이템 생성 시간 감소 조건 금액 감소량")] private int _difficulty_SpawnCoolTimeDownConditionDownScore; public int difficulty_SpawnCoolTimeDownConditionDownScore => this._difficulty_SpawnCoolTimeDownConditionDownScore;
 
+    [SerializeField, FoldoutGroup("게임오버"), LabelText("손해 스코어")] private int _gameOverScoreMax; public int gameOverScoreMax => this._gameOverScoreMax;
+    [SerializeField, FoldoutGroup("게임오버"), LabelText("파손 피규어")] private int _gameOverCountMax; public int gameOverCountMax => this._gameOverCountMax;
+
     protected override void Init_Project_Func()
     {
         base.Init_Project_Func();

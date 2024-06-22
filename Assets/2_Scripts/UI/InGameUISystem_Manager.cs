@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using Cargold;
+using TMPro;
+
+public enum GameState
+{
+    Start,
+    Playing,
+    GameOver
+}
 
 public class InGameUISystem_Manager : MonoBehaviour
 {
     public static InGameUISystem_Manager Instance;
-
+    public static GameState s_GameState = GameState.Start;
     [SerializeField, FoldoutGroup("아이템"), LabelText("스폰지점")] private Transform _itemSpawnPoint; public Transform itemSpawnPoint => _itemSpawnPoint;
     [SerializeField, FoldoutGroup("사촌동생"), LabelText("스폰지점")] private Transform _enemySpawnPoint; public Transform enemySpawnPoint => _enemySpawnPoint;
+
+    [SerializeField, FoldoutGroup("UI"), LabelText("토탈 스코어 텍스트")] private TextMeshProUGUI _ui_TotalScoreText;
+    [SerializeField, FoldoutGroup("UI"), LabelText("토탈 부순 피규어 텍스트")] private TextMeshProUGUI _ui_TotalSmashedText;
 
     [Button("기록")]
     private void abc()
@@ -36,16 +47,47 @@ public class InGameUISystem_Manager : MonoBehaviour
 
         //사운드
         this.Sound_BgnStart_Func();
+
+        //텍스트
+        this.Score_Update_Func();
+        this.SmashedScore_Update_Func();
+
+        s_GameState = GameState.Playing;
     }
 
     private void Sound_BgnStart_Func()
     {
-        SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
+        //SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
+
+        SoundChild_Script.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
 
         //Cargold.FrameWork.SoundSystem_Bgm_Script a_BgmIntro = SoundSystem_Manager.Instance.Get_PlayBgm_Func(BgmType.인게임BGMintro);
         //a_BgmIntro.PlayEndToStart_Func(() =>
         //{
         //    SoundSystem_Manager.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
         //});
+    }
+
+    public void Score_Update_Func()
+    {
+        this._ui_TotalScoreText.text = UserSystem_Manager.Instance.playInfo.Get_ScorePlayInfo_Func().ToString("N0") + "원";
+    }
+
+    public void SmashedScore_Update_Func()
+    {
+        this._ui_TotalSmashedText.text = UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func().ToString("N0") + "원(" + UserSystem_Manager.Instance.playInfo.Get_SmashedItemCountPlayInfo_Func().ToString() + "개)";
+
+        if (DataBase_Manager.Instance.GetTable_Define.gameOverScoreMax <= UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func() ||
+            DataBase_Manager.Instance.GetTable_Define.gameOverCountMax <= UserSystem_Manager.Instance.playInfo.Get_SmashedItemCountPlayInfo_Func())
+        {
+            //게임 오버 상태임.
+            this.GameOver_ManagerFuncs_Func();
+        }
+    }
+
+    private void GameOver_ManagerFuncs_Func()
+    {
+        s_GameState = GameState.GameOver;
+        Debug.Log("게임오버");
     }
 }

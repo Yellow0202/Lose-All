@@ -117,7 +117,7 @@ MonoBehaviour:
   - Define_3
   _item_Falling_Speed: 1
   _item_Spawn_CoolTime: 3
-  item_Spawn_CoolTime: 0
+  item_Spawn_CoolTime: 3
   _item_Spawn_Count: 0
   _enemy_MoveSpeed: 5
   _enemy_SpawnCondition: 100000
@@ -128,3 +128,5 @@ MonoBehaviour:
   _difficulty_ItemSpawnCoolTimeMAX: 1
   _difficulty_SpawnCoolTimeDownCondition: 25000
   _difficulty_SpawnCoolTimeDownConditionDownScore: 5000
+  _gameOverScoreMax: 50000
+  _gameOverCountMax: 8

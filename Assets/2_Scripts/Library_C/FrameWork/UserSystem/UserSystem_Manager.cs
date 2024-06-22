@@ -128,6 +128,8 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
         {
             this.GetData.score = 0;
             this.GetData.itemCount = 0;
+            this.GetData.smashedScore = 0;
+            this.GetData.smashedItemCount = 0;
         }
 
         public void Set_ScorePlayInfo_Func(int a_Score)
@@ -140,7 +142,18 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
             this.GetData.itemCount++;
         }
 
-        public int Get_ScrorePlayInfo_Func()
+        public void Set_SmashedScorePlayInfo_Func(int a_Score)
+        {
+            this.GetData.smashedScore += a_Score;
+            this.GetData.score -= a_Score;
+        }
+
+        public void Set_SmashedItemCountPlayInfo_Func()
+        {
+            this.GetData.smashedItemCount++;
+        }
+
+        public int Get_ScorePlayInfo_Func()
         {
             return this.GetData.score;
         }
@@ -148,6 +161,16 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
         public int Get_ItemCountPlayInfo_Func()
         {
             return this.GetData.itemCount;
+        }
+
+        public int Get_SmashedScorePlayInfo_Func()
+        {
+            return this.GetData.smashedScore;
+        }
+
+        public int Get_SmashedItemCountPlayInfo_Func()
+        {
+            return this.GetData.smashedItemCount;
         }
     }
     #endregion

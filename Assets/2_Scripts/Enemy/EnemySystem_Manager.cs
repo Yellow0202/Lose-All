@@ -52,7 +52,7 @@ public class EnemySystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Ga
         if (DataBase_Manager.Instance.GetTable_Define.enemy_SpawnMaxCount <= this._curSpawnEnemyCount)
             return;
 
-        int a_CurScore = UserSystem_Manager.Instance.playInfo.Get_ScrorePlayInfo_Func();
+        int a_CurScore = UserSystem_Manager.Instance.playInfo.Get_ScorePlayInfo_Func();
 
         if(this._curEnemySpawnCondition  <= a_CurScore)
         {

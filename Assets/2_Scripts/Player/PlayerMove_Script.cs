@@ -31,12 +31,18 @@ public class PlayerMove_Script : MonoBehaviour
 
     void Update()
     {
+        if (InGameUISystem_Manager.s_GameState != GameState.Playing)
+            return;
+
         this.Move_InputKey_Func();
         this.Move_PlayerMoving_Func();
     }
 
     private void FixedUpdate()
     {
+        if (InGameUISystem_Manager.s_GameState != GameState.Playing)
+            return;
+
         if (this.is_MoveOn == true)
             this._rigid.MovePosition(this._rigid.position + this._playerMoveVelocity * Time.fixedDeltaTime);
         else if (this.is_SlidingOn == true)

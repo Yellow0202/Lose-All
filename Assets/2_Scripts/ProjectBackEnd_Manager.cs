@@ -36,7 +36,7 @@ public class ProjectBackEnd_Manager : BackEnd_Manager
 
     public void RangkUpdate_Func()
     {
-        this.SetRank_Func(this.rankUuid, this.tableName, this.gameDataColumn, UserSystem_Manager.Instance.playInfo.Get_ScrorePlayInfo_Func());
+        this.SetRank_Func(this.rankUuid, this.tableName, this.gameDataColumn, UserSystem_Manager.Instance.playInfo.Get_ScorePlayInfo_Func());
     }
 
 }

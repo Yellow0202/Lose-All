@@ -33,11 +33,17 @@ public class Enemy_Script : MonoBehaviour
 
     private void Update()
     {
+        if (InGameUISystem_Manager.s_GameState != GameState.Playing)
+            return;
+
         this.Move_EnemyMoving_Func();
     }
 
     private void FixedUpdate()
     {
+        if (InGameUISystem_Manager.s_GameState != GameState.Playing)
+            return;
+
         this._rigid.MovePosition(this._rigid.position + this._enemyMoveVelocity * Time.fixedDeltaTime);
     }
 
@@ -55,6 +61,9 @@ public class Enemy_Script : MonoBehaviour
 
         while (true)
         {
+            if (InGameUISystem_Manager.s_GameState != GameState.Playing)
+                break;
+
             if (DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime + a_Plustime <= _curSpawnaTime)
             {
                 //동작을 취함.

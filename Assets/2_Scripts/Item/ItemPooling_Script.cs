@@ -73,7 +73,9 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         }
         else
         {
-            UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(-(this._myData.ItemScore));
+            UserSystem_Manager.Instance.playInfo.Set_SmashedScorePlayInfo_Func(this._myData.ItemScore);
+            UserSystem_Manager.Instance.playInfo.Set_SmashedItemCountPlayInfo_Func();
+
             //효과음
             SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.떨어지는효과음);
 
@@ -91,6 +93,8 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             //플레이어 캐치 실패 UI 출력
         }
 
+        InGameUISystem_Manager.Instance.Score_Update_Func();
+        InGameUISystem_Manager.Instance.SmashedScore_Update_Func();
         ItemSystem_Manager.Instance.Set_CountDown_Func();
     }
 

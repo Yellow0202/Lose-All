@@ -68,12 +68,16 @@ public class UserWealthData : Cargold.FrameWork.UserSystem_Manager.Wealth_C<Weal
 public class UserPlayInfo
 {
     public int score;
+    public int smashedScore;
     public int itemCount;
+    public int smashedItemCount;
 
-    public UserPlayInfo(int a_StartScore = 0, int a_StartCount = 0)
+    public UserPlayInfo(int a_StartScore = 0, int a_StartCount = 0, int a_StartSmashedScore = 0, int StartSmashedItemCount = 0)
     {
         this.score = a_StartScore;
         this.itemCount = a_StartCount;
+        this.smashedScore = a_StartSmashedScore;
+        this.smashedItemCount = StartSmashedItemCount;
     }
 }
 #endregion
