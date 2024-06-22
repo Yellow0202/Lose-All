@@ -42,6 +42,8 @@ public class InGameUISystem_Manager : MonoBehaviour
 
     private void Start_ManagerFuncs_Func()
     {
+        Debug.Log("실행됨");
+
         //ItemSystem_Manager.Instance.Start_ItemSpawn_Func();
 
         //임시
@@ -61,6 +63,7 @@ public class InGameUISystem_Manager : MonoBehaviour
 
     private void Sound_BgnStart_Func()
     {
+        //SoundChild_Script.Instance.bgm
         SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
 
         //SoundChild_Script.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);

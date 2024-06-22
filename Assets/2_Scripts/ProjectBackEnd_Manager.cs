@@ -22,16 +22,27 @@ public class ProjectBackEnd_Manager : BackEnd_Manager
         }
         else if (_layer == 2)
         {
-            this.Login_Func("LODWK", "12345");
+            
         }
     }
 
     //회원가입 -> 로그인 -> 닉네임 변경 -> 랭크 기입 -> 랭크 출력
-    public void Login_Func(string _id, string _password)
+    public void Login_Func(string _id, string _password, out bool is_Success)
     {
-        this.OnSignUp_Func(_id, _password);
-        this.OnLogin_Func(_id, _password);
-        this.SetNickname_Func(_id);
+        this.OnSignUp_Func(_id, _password, out is_Success);
+
+        if (is_Success == false)
+            return;
+
+        this.OnLogin_Func(_id, _password, out is_Success);
+
+        if (is_Success == false)
+            return;
+
+        this.SetNickname_Func(_id, out is_Success);
+
+        if (is_Success == false)
+            return;
     }
 
     public void RangkUpdate_Func()

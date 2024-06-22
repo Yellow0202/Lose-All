@@ -45,11 +45,13 @@ public class SoundChild_Script : SoundSystem_Manager
         //실패한 자의 흔적... 이럴 수 밖에 없었다.
         if (this.bgmDataDic.TryGetValue(a_bgmType, out Sound_C.BgmData a_Value))
         {
+            this._bgnFirstSource.Stop();
             this._bgnFirstSource.clip = a_Value.clip;
             this._bgnFirstSource.volume = a_Value.volume;
             this._bgnFirstSource.Play();
 
-            StartCoroutine(this.Start_InGameBgmSound_Cor());
+            if(a_bgmType == BgmType.인게임BGMintro)
+                StartCoroutine(this.Start_InGameBgmSound_Cor());
         }
     }
 
@@ -62,5 +64,10 @@ public class SoundChild_Script : SoundSystem_Manager
 
         this.PlayBgm_Func(BgmType.인게임BGMLoop);
         StopCoroutine(this.Start_InGameBgmSound_Cor());
+    }
+
+    public void Click_UIBtnSound_Func()
+    {
+        this.Play_SFXSound_Func(SfxType.터치음);
     }
 }
