@@ -62,7 +62,7 @@ public class PlayerMove_Script : MonoBehaviour
             this.is_MoveOn = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) == true)
+        if (Input.GetKeyDown(KeyCode.Z) == true && this.is_MoveOn == true)
         {
             this._anim.SetTrigger("Silde_On");
             this.is_SlidingOn = true;
