@@ -10,12 +10,14 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
 {
     [SerializeField, LabelText("아이템 스프라이트 렌더러")] private SpriteRenderer _itemSpriteRenderer;
     [SerializeField, LabelText("리지드바디")] private Rigidbody2D _itemRid;
-    
-    [SerializeField, LabelText("판정 포인트(임시)")] private Transform _itemCheckPointTr;
+
+    [SerializeField, LabelText("도깨비불 파티클")] private ParticleSystem _horrorFire;
 
     [SerializeField, LabelText("변경 스케일")] private Vector3 _itemScale;
 
     [LabelText("전달 받은 데이터")] private Item_InfoData _myData;
+
+    [LabelText("도깨비불이 붙어 있는지")] private bool is_Horror;
 
     public void InitializedByPoolingSystem()
     {
@@ -43,7 +45,9 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         this._itemRid.mass = a_ItemData.Mass;
         this._itemRid.gravityScale = DataBase_Manager.Instance.GetTable_Define.item_Falling_Speed;
 
-        if(is_Up == true)
+        this.is_Horror = Random.Range(0.0f, 100.0f) <= DataBase_Manager.Instance.GetTable_Define.item_Horror_Vlaue ? true : false;
+
+        if (is_Up == true)
         {
             //스폰시 살짝 위로 올라가야함.
             Vector2 a_StartMoveVec = Vector2.zero;
@@ -51,6 +55,17 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             a_StartMoveVec.y = 5;
 
             this._itemRid.velocity = a_StartMoveVec;
+        }
+
+        if (this.is_Horror == true)
+        {
+            this._horrorFire.gameObject.SetActive(true);
+            this._horrorFire.Play();
+        }
+        else
+        {
+            this._horrorFire.gameObject.SetActive(false);
+            this._horrorFire.Stop();
         }
     }
 
@@ -67,6 +82,8 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(this._myData.ItemScore);
             EnemySystem_Manager.Instance.Check_CurGetScoreToItemCoolTimeDown_Func(this._myData.ItemScore);
             EnemySystem_Manager.Instance.Check_EnemySpawnCondition_Func();
+
+            ItemSystem_Manager.Instance.Call_ItemGameObject_Func(this._myData.IntKey);
 
             //true가 나왔다는 건 캐치로 아이템을 얻었다는 것.
             //그럼 아이템과 플레이어 캐치 부분의 겹침
@@ -96,6 +113,15 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             }
 
             //플레이어 캐치 실패 UI 출력
+            PlayerSystem_Manager.Instance.Call_ChtchBalloon_Func(ChtchBalloon.miss);
+
+            if(this.is_Horror == true)
+            {
+                //귀신 사진이 올라와야 함.
+                InGameUiAnim_Script.Instance.Call_GhostAnimOn_Func();
+                SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.유령);
+            }
+
         }
 
         InGameUISystem_Manager.Instance.Score_Update_Func();
@@ -112,11 +138,13 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         {
             //퍼펙트 UI 출력
             SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.퍼펙트);
+            PlayerSystem_Manager.Instance.Call_ChtchBalloon_Func(ChtchBalloon.perfect);
         }
         else
         {
             //굿 UI 출력
             SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.굿);
+            PlayerSystem_Manager.Instance.Call_ChtchBalloon_Func(ChtchBalloon.good);
         }
 
     }

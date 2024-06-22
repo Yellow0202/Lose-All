@@ -123,13 +123,12 @@ public class UI_Result : MonoSingleton<UI_Result>
             }
         }
 
-
         this.Result_RankingObjectOpen_Func();
     }
 
     private void Result_RankingObjectOpen_Func()
     {
-        this._rankingOnOffObj.SetActive(true);
+        InGameUiAnim_Script.Instance.Call_RanKingViewOpewn_Func();
     }
 
     public void Btn_ClickReStart_Func()

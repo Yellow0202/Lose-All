@@ -119,6 +119,7 @@ MonoBehaviour:
   _item_Spawn_CoolTime: 3
   item_Spawn_CoolTime: 3
   _item_Spawn_Count: 0
+  _item_Horror_Vlaue: 10
   _enemy_MoveSpeed: 5
   _enemy_SpawnCondition: 100000
   _enemy_SpawnMaxCount: 3

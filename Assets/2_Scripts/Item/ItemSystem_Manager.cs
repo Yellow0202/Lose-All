@@ -15,6 +15,8 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
 
     [SerializeField, LabelText("이미지 딕셔너리 리스트")] private Dictionary<int, List<Sprite>> _intKeyToSpriteListDataDic;
 
+    [SerializeField, LabelText("온오프 딕셔너리 리스트")] private Dictionary<int, List<GameObject>> _intKeyToGameObjectListDataDic => InGameUISystem_Manager.Instance.intKeyToGameObjectListDataDic;
+
     public void Init_Func(int _layer)
     {
         if (_layer == 0)
@@ -106,5 +108,22 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
             return a_ValueList.GetRandItem_Func();
         else
             return null;
+    }
+
+    public void Call_ItemGameObject_Func(int a_Intkey)
+    {   //획득한 아이템의 아이템 키에 맞는 리스트를 뽑아와 꺼져 있는 대상을 켜준다. 모두 켜져있다면 딕셔너리에서 삭제시킨다.
+        if(this._intKeyToGameObjectListDataDic.TryGetValue(a_Intkey, out List<GameObject> a_VlaueList))
+        {
+            for (int i = 0; i < a_VlaueList.Count; i++)
+            {
+                if(a_VlaueList[i].gameObject.activeSelf == false)
+                {
+                    a_VlaueList[i].SetActive(true);
+                    return;
+                }
+            }
+
+            this._intKeyToGameObjectListDataDic.Remove(a_Intkey);
+        }
     }
 }

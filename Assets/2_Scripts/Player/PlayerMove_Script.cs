@@ -7,6 +7,7 @@ public class PlayerMove_Script : MonoBehaviour
 {
     [SerializeField, LabelText("캐치포인트 오브젝트")] private Transform _chtchPointTr;
     [SerializeField, LabelText("캐릭터 스프라이트 렌더러")] private SpriteRenderer _playerSpriteRenderer;
+    [SerializeField, LabelText("캐릭터 상단 퍼펙트 풍선")] private GameObject _main_r_Obj; public GameObject main_r_Obj => this._main_r_Obj;
 
     [SerializeField, LabelText("플레이어 슬라이딩 가속도")] private int _moveboost;
 
@@ -26,7 +27,7 @@ public class PlayerMove_Script : MonoBehaviour
         this._rigid = gameObject.GetComponent<Rigidbody2D>();
         this._anim = gameObject.GetComponent<Animator>();
 
-        this._playerStartScale = this.transform.localScale;
+        this._playerStartScale = this._playerSpriteRenderer.transform.localScale;
     }
 
     void Update()
@@ -88,7 +89,7 @@ public class PlayerMove_Script : MonoBehaviour
             if (0.0f < this._playerStartScale.x)
                 this._playerStartScale.x *= -1;
 
-            this.transform.localScale = this._playerStartScale;
+            this._playerSpriteRenderer.transform.localScale = this._playerStartScale;
 
 
         }
@@ -98,7 +99,7 @@ public class PlayerMove_Script : MonoBehaviour
             if (this._playerStartScale.x < 0.0f)
                 this._playerStartScale.x *= -1;
 
-            this.transform.localScale = this._playerStartScale;
+            this._playerSpriteRenderer.transform.localScale = this._playerStartScale;
         }
         else
         {
