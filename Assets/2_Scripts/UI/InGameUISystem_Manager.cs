@@ -35,20 +35,11 @@ public class InGameUISystem_Manager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+
+
+    public void Start_ManagerFuncs_Func()
     {
-        this.Start_ManagerFuncs_Func();
-    }
-
-    private void Start_ManagerFuncs_Func()
-    {
-        Debug.Log("실행됨");
-
-        //ItemSystem_Manager.Instance.Start_ItemSpawn_Func();
-
-        //임시
         EnemySystem_Manager.Instance.Spawn_EnemyCharactor_Func();
-
         PlayerSystem_Manager.Instance.Start_PlayerSystem_Manger();
 
         //사운드
@@ -63,16 +54,7 @@ public class InGameUISystem_Manager : MonoBehaviour
 
     private void Sound_BgnStart_Func()
     {
-        //SoundChild_Script.Instance.bgm
         SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
-
-        //SoundChild_Script.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
-
-        //Cargold.FrameWork.SoundSystem_Bgm_Script a_BgmIntro = SoundSystem_Manager.Instance.Get_PlayBgm_Func(BgmType.인게임BGMintro);
-        //a_BgmIntro.PlayEndToStart_Func(() =>
-        //{
-        //    SoundSystem_Manager.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
-        //});
     }
 
     public void Score_Update_Func()
