@@ -6,6 +6,7 @@ using TMPro;
 using Sirenix.OdinInspector;
 using static Cargold.SDK.BackEnd.BackEnd_Manager;
 using System;
+using UnityEngine.SceneManagement;
 
 public class UI_Result : MonoSingleton<UI_Result>
 {
@@ -51,6 +52,10 @@ public class UI_Result : MonoSingleton<UI_Result>
     override protected void OnEnable()
     {
         base.OnEnable();
+
+        this.button_Retry.onClick.AddListener(Btn_ClickReStart_Func);
+        this.button_Quit.onClick.AddListener(Btn_ClickGoToTitle_Func);
+
     }
 
     public void Result_RankingCall_Func()
@@ -62,8 +67,8 @@ public class UI_Result : MonoSingleton<UI_Result>
     {   //랭킹에 내 정보를 기입.
 
         this._nickName = UserSystem_Manager.Instance.loginData.Get_UserData_Func().userName;
-        Debug.Log("Name : " + _nickName);
-        ProjectBackEnd_Manager.Instance.RangkUpdate_Func(UserSystem_Manager.Instance.loginData.Get_UserData_Func().userScore);
+
+        ProjectBackEnd_Manager.Instance.RangkUpdate_Func(this._nickName, UserSystem_Manager.Instance.loginData.Get_UserData_Func().userScore);
 
         //UI에 내 정보 기입
         this.textMeshProUGUI_Name.text = _nickName;
@@ -95,7 +100,14 @@ public class UI_Result : MonoSingleton<UI_Result>
                 break;
 
             if (this._rankList[i].nickname == this._nickName)
+            {
                 is_MyData = true;
+
+                if(UserSystem_Manager.Instance.loginData.Get_UserData_Func().userScore < this._rankList[i].value)
+                {
+                    is_MyData = false;
+                }
+            }
             else
                 is_MyData = false;
 
@@ -120,12 +132,18 @@ public class UI_Result : MonoSingleton<UI_Result>
         this._rankingOnOffObj.SetActive(true);
     }
 
-    //게임 끝
-    //랭킹에 내 정보를 기입해야함.
-    //기존 랭킹 정보를 다운받음.
-    //상위 19명만 입력. 나머지 하나는 내 점수.
-    //오름차순으로 정렬.
+    public void Btn_ClickReStart_Func()
+    {
+        SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.터치음);
+        SoundChild_Script.Instance.Stop_Bgm_Func();
+        SceneManager.LoadScene("InGame");
+    }
 
-
+    public void Btn_ClickGoToTitle_Func()
+    {
+        SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.터치음);
+        SoundChild_Script.Instance.Stop_Bgm_Func();
+        SceneManager.LoadScene("Title");
+    }
 
 }

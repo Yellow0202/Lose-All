@@ -28,6 +28,7 @@ public class UI_Name : MonoSingleton<UI_Name>
         this.button_Start.onClick.AddListener(Play_BtnSound_Func);
         this.button_Start.onClick.AddListener(Clikc_Login_Func);
         this.button_Close.onClick.AddListener(Play_BtnSound_Func);
+        this.button_Close.onClick.AddListener(() => this.gameObject.SetActive(false));
 
         this.is_LoginBtnClick = false;
     }

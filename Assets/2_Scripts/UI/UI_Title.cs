@@ -25,6 +25,14 @@ public class UI_Title : MonoSingleton<UI_Title>
         this.button_Start.onClick.AddListener(Play_BtnSound_Func);
         this.button_Exit.onClick.AddListener(Play_BtnSound_Func);
         this.button_Start.onClick.AddListener(() => { this._inputView.SetActive(true); });
+        this.button_Exit.onClick.AddListener(() =>
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        });
     }
 
     private void Play_BtnSound_Func()

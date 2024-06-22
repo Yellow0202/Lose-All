@@ -11,7 +11,8 @@ public class Intro_Script : MonoBehaviour
 
     public void Start_Game_Func()
     {
-        InGameUISystem_Manager.Instance.Start_ManagerFuncs_Func();
+        SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.ÅÍÄ¡À½);
+        InGameUiAnim_Script.Instance.Call_TutorialOpenAnim_Func();
         this.gameObject.SetActive(false);
     }
 }
