@@ -17,9 +17,9 @@ public class UI_Title : MonoSingleton<UI_Title>
     [SerializeField, LabelText("입력창")] private GameObject _inputView;
 
     // Start is called before the first frame update
-    override protected void Start()
+    override protected void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
 
         SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.타이틀BGM);
         this.button_Start.onClick.AddListener(Play_BtnSound_Func);

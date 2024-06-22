@@ -21,9 +21,9 @@ public class UI_Name : MonoSingleton<UI_Name>
     [LabelText("게임시작 버튼이 눌린 상태인지")] private bool is_LoginBtnClick;
 
     // Start is called before the first frame update
-    override protected void Start()
+    override protected void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
 
         this.button_Start.onClick.AddListener(Play_BtnSound_Func);
         this.button_Start.onClick.AddListener(Clikc_Login_Func);

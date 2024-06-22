@@ -51,15 +51,23 @@ public class GameSystem_Manager : Cargold.FrameWork.GameSystem_Manager
     /// <returns></returns>
     public bool RegistMonoSingleton<T>(MonoSingleton<T> InMonoSingleton)
     {
+        if (InMonoSingleton == null)
+        {
+            Debug.LogError("do not regist null");
+        }
+
         bool alreadyExists = monoSingletons.TryGetValue(typeof(T), out MonoBehaviour findee);
-        if (alreadyExists)
+        bool registingAgain = findee == InMonoSingleton;
+
+        if (alreadyExists && registingAgain == false)
         {
             Destroy(InMonoSingleton, 0.1f);
         }
-        else
+        else if (registingAgain == false)
         {
             monoSingletons.Add(typeof(T), InMonoSingleton);
         }
+
         return ! alreadyExists;
     }
 

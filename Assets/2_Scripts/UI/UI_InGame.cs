@@ -5,9 +5,9 @@ using UnityEngine;
 public class UI_InGame : MonoSingleton<UI_InGame>
 {
     // Start is called before the first frame update
-    override protected void Start()
+    override protected void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
     }
 
     // Update is called once per frame

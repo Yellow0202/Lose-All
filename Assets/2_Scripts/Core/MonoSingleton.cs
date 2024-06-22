@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonoSingleton<T> : MonoBehaviour
 {
     // Start is called before the first frame update
-    virtual protected void Start()
+    virtual protected void OnEnable()
     {
         GameSystem_Manager.Instance.RegistMonoSingleton<T>(this);
     }
