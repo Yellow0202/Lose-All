@@ -33,5 +33,17 @@ public class InGameUISystem_Manager : MonoBehaviour
 
         //임시
         EnemySystem_Manager.Instance.Spawn_EnemyCharactor_Func();
+
+        //사운드
+        this.Sound_BgnStart_Func();
+    }
+
+    private void Sound_BgnStart_Func()
+    {
+        Cargold.FrameWork.SoundSystem_Sfx_Script a_BgmIntro = SoundSystem_Manager.Instance.Get_PlaySfx_Func(SfxType.인게임BGMintro);
+        a_BgmIntro.PlayEndToStart_Func(() => 
+        {
+            SoundSystem_Manager.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
+        });
     }
 }

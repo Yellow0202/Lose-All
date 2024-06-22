@@ -8,7 +8,7 @@ public class PlayerMove_Script : MonoBehaviour
     [SerializeField, LabelText("캐치포인트 오브젝트")] private Transform _chtchPointTr;
 
     [LabelText("캐릭터 리지드바디")] private Rigidbody2D _rigid;
-
+    [LabelText("캐릭터 애니메이터")] private Animator _anim;
     [LabelText("플레이어 이동속독")] private float _moveSpeed => PlayerSystem_Manager.Instance.player_MoveSpeed;
     [LabelText("좌우 입력키 방향값")] private float _horizontal;
     [LabelText("플레이어 이동 방향 벡터")] private Vector2 _playerMoveInput;
@@ -16,11 +16,12 @@ public class PlayerMove_Script : MonoBehaviour
     public void Start_PlayerMove_Func()
     {
         this._rigid = gameObject.GetComponent<Rigidbody2D>();
+        this._anim = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        this.Move_InputKey_Func();
         this.Move_PlayerMoving_Func();
         this.Click_PlayerSliding_Func();
         this.Click_PlayerCatch_Func();
@@ -31,9 +32,35 @@ public class PlayerMove_Script : MonoBehaviour
         this._rigid.MovePosition(this._rigid.position + this._playerMoveVelocity * Time.fixedDeltaTime);
     }
 
+    private void Move_InputKey_Func()
+    {
+        if(Input.GetKeyDown(KeyCode.X) == true)
+        {
+            this._anim.SetBool("Catch_On", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.X) == true)
+        {
+            this._anim.SetBool("Catch_On", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z) == true)
+        {
+            //this._anim.SetBool("Catch_On", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Z) == true)
+        {
+            //this._anim.SetBool("Catch_On", false);
+        }
+
+    }
+
     private void Move_PlayerMoving_Func()
     {
         this._horizontal = Input.GetAxis("Horizontal");
+
+        this._anim.SetFloat("Move", this._horizontal);
 
         this._playerMoveInput = new Vector2(this._horizontal, 0);
         this._playerMoveVelocity = _playerMoveInput * _moveSpeed;

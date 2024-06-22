@@ -43,9 +43,6 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
         ItemPooling_Script _ItemPrefab = PoolingSystem_Manager.Instance.Spawn_Func<ItemPooling_Script>(PoolingKey.ItempPoolingKey);
         _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
 
-        //효과음
-        SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.떨어지는효과음);
-
         this._curItemSpawnCount++;
         UserSystem_Manager.Instance.playInfo.Set_ItemCountPlayInfo_Func();
     }

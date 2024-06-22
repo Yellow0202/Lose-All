@@ -33,6 +33,8 @@ public partial struct SfxType
     public const int 터치음 = 5;
     public const int 퍼펙트 = 6;
     public const int 함정카드 = 7;
+    public const int 소름1 = 8;
+    public const int 소름2 = 9;
 
 #if UNITY_EDITOR
     private IEnumerable GetIEnumerable => SfxTypeSobj.Instance.GetIEnumerable;

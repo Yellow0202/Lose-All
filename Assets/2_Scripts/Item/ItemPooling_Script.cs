@@ -72,6 +72,19 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         else
         {
             UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(-(this._myData.ItemScore));
+            //효과음
+            SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.떨어지는효과음);
+
+            bool a_Random = Random.Range(0, 2) == 0 ? true : false;
+
+            if(a_Random == true)
+            {
+                SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.소름1);
+            }
+            else
+            {
+                SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.소름2);
+            }
         }
 
         ItemSystem_Manager.Instance.Set_CountDown_Func();
