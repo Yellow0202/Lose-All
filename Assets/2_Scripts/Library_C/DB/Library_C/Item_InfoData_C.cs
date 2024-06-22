@@ -16,7 +16,8 @@ public partial class Item_InfoData : Data_C
      [LabelText("아이템 설명")] public string Comment;
      [LabelText("아이템 인트 키")] public int IntKey;
      [LabelText("아이템 스코어")] public int ItemScore;
-     [LabelText("아이템 무게")] public float Mess;
+     [LabelText("아이템 무게")] public float Mass;
+     [LabelText("아이템 아이콘")] public Sprite Icon;
 
     
 
@@ -29,7 +30,8 @@ public partial class Item_InfoData : Data_C
         Comment = _cellDataArr[3];
         IntKey = _cellDataArr[4].ToInt();
         ItemScore = _cellDataArr[5].ToInt();
-        Mess = _cellDataArr[6].ToFloat();
+        Mass = _cellDataArr[6].ToFloat();
+        Icon = Editor_C.GetLoadAssetAtPath_Func<Sprite>(_cellDataArr[7]);
     }
 #endif
 }

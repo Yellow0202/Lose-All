@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Guard
   - Figures
+  - DownGuard
+  - CatchPoint
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - Figures
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 

@@ -15,7 +15,18 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 21300000, guid: 831b345c61d0d584d90215b144855cb2, type: 3}
+    - {fileID: 21300000, guid: eee5214b3bb04ba488aa7838b8b71692, type: 3}
+    - {fileID: 21300000, guid: 0ae8da54a32431346b5d55998c599035, type: 3}
+    - {fileID: 21300000, guid: d5c49ee279476aa45b757f6c2362e733, type: 3}
+    - {fileID: 21300000, guid: 932e3b64509108946b0dcafdf16a07dc, type: 3}
+    - {fileID: 21300000, guid: 75f33825013b5064384dfedcb227b718, type: 3}
+    - {fileID: 21300000, guid: 4d9b79959d731594eb74c0778bd1599a, type: 3}
+    - {fileID: 21300000, guid: a8ed8f42092b90c4b945e5003d716182, type: 3}
+    - {fileID: 21300000, guid: 6acca3819a51b774e8ed3ac904ff0ba2, type: 3}
+    - {fileID: 21300000, guid: 852c77859bacbb843855450b7c0a2cc4, type: 3}
+    - {fileID: 21300000, guid: 5c00ff49708f5be4f83f6206d9868395, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -55,16 +66,19 @@ MonoBehaviour:
       Data: Item_Name_0
     - Name: Comment
       Entry: 1
-      Data: "\uBA38\uADF8\uCEF5"
+      Data: "\uB9CC\uC96C"
     - Name: IntKey
       Entry: 3
       Data: 10001
     - Name: ItemScore
       Entry: 3
       Data: 1500
-    - Name: Mess
+    - Name: Mass
       Entry: 4
       Data: 1
+    - Name: Icon
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -91,16 +105,19 @@ MonoBehaviour:
       Data: Item_Name_1
     - Name: Comment
       Entry: 1
-      Data: "\uC5F0\uB450\uC0C9 \uACF5\uB8E1"
+      Data: "\uBD80\uCC44"
     - Name: IntKey
       Entry: 3
       Data: 10002
     - Name: ItemScore
       Entry: 3
       Data: 2700
-    - Name: Mess
+    - Name: Mass
       Entry: 4
       Data: 0.8
+    - Name: Icon
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -127,16 +144,19 @@ MonoBehaviour:
       Data: Item_Name_2
     - Name: Comment
       Entry: 1
-      Data: "\uC9C4\uB3D7\uAC1C"
+      Data: "\uD2F0\uC154\uCE20"
     - Name: IntKey
       Entry: 3
       Data: 10003
     - Name: ItemScore
       Entry: 3
       Data: 3500
-    - Name: Mess
+    - Name: Mass
       Entry: 4
       Data: 0.9
+    - Name: Icon
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -163,16 +183,19 @@ MonoBehaviour:
       Data: Item_Name_3
     - Name: Comment
       Entry: 1
-      Data: "\uCF54\uB07C\uB9AC\uB543\uC950"
+      Data: "\uB9CC\uD654\uCC45"
     - Name: IntKey
       Entry: 3
       Data: 10004
     - Name: ItemScore
       Entry: 3
       Data: 4500
-    - Name: Mess
+    - Name: Mass
       Entry: 4
-      Data: 0.9
+      Data: 1.4
+    - Name: Icon
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -199,16 +222,19 @@ MonoBehaviour:
       Data: Item_Name_4
     - Name: Comment
       Entry: 1
-      Data: "\uD584\uC2A4\uD130"
+      Data: "\uD0DC\uD53C\uC2A4\uD2B8\uB9AC"
     - Name: IntKey
       Entry: 3
       Data: 10005
     - Name: ItemScore
       Entry: 3
       Data: 5600
-    - Name: Mess
+    - Name: Mass
       Entry: 4
-      Data: 1.4
+      Data: 1.8
+    - Name: Icon
+      Entry: 10
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -235,16 +261,19 @@ MonoBehaviour:
       Data: Item_Name_5
     - Name: Comment
       Entry: 1
-      Data: "\uACE0\uC2B4\uB3C4\uCE58"
+      Data: "\uBA38\uADF8\uCEF5"
     - Name: IntKey
       Entry: 3
       Data: 10006
     - Name: ItemScore
       Entry: 3
       Data: 6300
-    - Name: Mess
+    - Name: Mass
       Entry: 4
       Data: 2
+    - Name: Icon
+      Entry: 10
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -278,9 +307,12 @@ MonoBehaviour:
     - Name: ItemScore
       Entry: 3
       Data: 7700
-    - Name: Mess
+    - Name: Mass
       Entry: 4
       Data: 1.5
+    - Name: Icon
+      Entry: 10
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -314,9 +346,12 @@ MonoBehaviour:
     - Name: ItemScore
       Entry: 3
       Data: 9900
-    - Name: Mess
+    - Name: Mass
       Entry: 4
       Data: 1.3
+    - Name: Icon
+      Entry: 10
+      Data: 7
     - Name: 
       Entry: 8
       Data: 
@@ -350,9 +385,12 @@ MonoBehaviour:
     - Name: ItemScore
       Entry: 3
       Data: 11800
-    - Name: Mess
+    - Name: Mass
       Entry: 4
       Data: 1.8
+    - Name: Icon
+      Entry: 10
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -379,16 +417,19 @@ MonoBehaviour:
       Data: Item_Name_9
     - Name: Comment
       Entry: 1
-      Data: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
+      Data: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
     - Name: IntKey
       Entry: 3
       Data: 10010
     - Name: ItemScore
       Entry: 3
-      Data: -6000
-    - Name: Mess
+      Data: 50000
+    - Name: Mass
       Entry: 4
       Data: 2
+    - Name: Icon
+      Entry: 10
+      Data: 9
     - Name: 
       Entry: 8
       Data: 
@@ -415,16 +456,19 @@ MonoBehaviour:
       Data: Item_Name_10
     - Name: Comment
       Entry: 1
-      Data: "\uAC8C\uC784\uD328\uB4DC"
+      Data: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
     - Name: IntKey
       Entry: 3
       Data: 10011
     - Name: ItemScore
       Entry: 3
-      Data: 50000
-    - Name: Mess
+      Data: -6000
+    - Name: Mass
       Entry: 4
       Data: 1.5
+    - Name: Icon
+      Entry: 10
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -441,80 +485,91 @@ MonoBehaviour:
   - Key: Item_10001
     Item_Rare: 1
     Name: Item_Name_0
-    Comment: "\uBA38\uADF8\uCEF5"
+    Comment: "\uB9CC\uC96C"
     IntKey: 10001
     ItemScore: 1500
-    Mess: 1
+    Mass: 1
+    Icon: {fileID: 21300000, guid: 831b345c61d0d584d90215b144855cb2, type: 3}
   - Key: Item_10002
     Item_Rare: 1
     Name: Item_Name_1
-    Comment: "\uC5F0\uB450\uC0C9 \uACF5\uB8E1"
+    Comment: "\uBD80\uCC44"
     IntKey: 10002
     ItemScore: 2700
-    Mess: 0.8
+    Mass: 0.8
+    Icon: {fileID: 21300000, guid: eee5214b3bb04ba488aa7838b8b71692, type: 3}
   - Key: Item_10003
     Item_Rare: 1
     Name: Item_Name_2
-    Comment: "\uC9C4\uB3D7\uAC1C"
+    Comment: "\uD2F0\uC154\uCE20"
     IntKey: 10003
     ItemScore: 3500
-    Mess: 0.9
+    Mass: 0.9
+    Icon: {fileID: 21300000, guid: 0ae8da54a32431346b5d55998c599035, type: 3}
   - Key: Item_10004
     Item_Rare: 1
     Name: Item_Name_3
-    Comment: "\uCF54\uB07C\uB9AC\uB543\uC950"
+    Comment: "\uB9CC\uD654\uCC45"
     IntKey: 10004
     ItemScore: 4500
-    Mess: 0.9
+    Mass: 1.4
+    Icon: {fileID: 21300000, guid: d5c49ee279476aa45b757f6c2362e733, type: 3}
   - Key: Item_10005
     Item_Rare: 1
     Name: Item_Name_4
-    Comment: "\uD584\uC2A4\uD130"
+    Comment: "\uD0DC\uD53C\uC2A4\uD2B8\uB9AC"
     IntKey: 10005
     ItemScore: 5600
-    Mess: 1.4
+    Mass: 1.8
+    Icon: {fileID: 21300000, guid: 932e3b64509108946b0dcafdf16a07dc, type: 3}
   - Key: Item_10006
     Item_Rare: 1
     Name: Item_Name_5
-    Comment: "\uACE0\uC2B4\uB3C4\uCE58"
+    Comment: "\uBA38\uADF8\uCEF5"
     IntKey: 10006
     ItemScore: 6300
-    Mess: 2
+    Mass: 2
+    Icon: {fileID: 21300000, guid: 75f33825013b5064384dfedcb227b718, type: 3}
   - Key: Item_10007
     Item_Rare: 1
     Name: Item_Name_6
     Comment: "\uAC74\uB2F4"
     IntKey: 10007
     ItemScore: 7700
-    Mess: 1.5
+    Mass: 1.5
+    Icon: {fileID: 21300000, guid: 4d9b79959d731594eb74c0778bd1599a, type: 3}
   - Key: Item_10008
     Item_Rare: 2
     Name: Item_Name_7
     Comment: "\uBBFC\uD2B8\uBA38\uB9AC\uC5EC\uCE90"
     IntKey: 10008
     ItemScore: 9900
-    Mess: 1.3
+    Mass: 1.3
+    Icon: {fileID: 21300000, guid: a8ed8f42092b90c4b945e5003d716182, type: 3}
   - Key: Item_10009
     Item_Rare: 2
     Name: Item_Name_8
     Comment: "\uD558\uB298\uBA38\uB9AC\uC5EC\uCE90"
     IntKey: 10009
     ItemScore: 11800
-    Mess: 1.8
+    Mass: 1.8
+    Icon: {fileID: 21300000, guid: 6acca3819a51b774e8ed3ac904ff0ba2, type: 3}
   - Key: Item_10010
     Item_Rare: 2
     Name: Item_Name_9
-    Comment: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
+    Comment: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
     IntKey: 10010
-    ItemScore: -6000
-    Mess: 2
+    ItemScore: 50000
+    Mass: 2
+    Icon: {fileID: 21300000, guid: 852c77859bacbb843855450b7c0a2cc4, type: 3}
   - Key: Item_10011
     Item_Rare: 3
     Name: Item_Name_10
-    Comment: "\uAC8C\uC784\uD328\uB4DC"
+    Comment: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
     IntKey: 10011
-    ItemScore: 50000
-    Mess: 1.5
+    ItemScore: -6000
+    Mass: 1.5
+    Icon: {fileID: 21300000, guid: 5c00ff49708f5be4f83f6206d9868395, type: 3}
   keyArr:
   - Item_10001
   - Item_10002

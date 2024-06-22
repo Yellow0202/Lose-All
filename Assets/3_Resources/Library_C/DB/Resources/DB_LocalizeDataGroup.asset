@@ -49,7 +49,7 @@ MonoBehaviour:
       Data: Item_Name_0
     - Name: ko
       Entry: 1
-      Data: "\uC5F0\uB450\uC0C9\uACF5\uB8E1"
+      Data: "\uB9CC\uC96C"
     - Name: en
       Entry: 1
       Data: 
@@ -82,7 +82,7 @@ MonoBehaviour:
       Data: Item_Name_1
     - Name: ko
       Entry: 1
-      Data: "\uC9C4\uB3D7\uAC1C"
+      Data: "\uD2F0\uC154\uCE20"
     - Name: en
       Entry: 1
       Data: 
@@ -115,7 +115,7 @@ MonoBehaviour:
       Data: Item_Name_2
     - Name: ko
       Entry: 1
-      Data: "\uCF54\uB07C\uB9AC\uB543\uC950"
+      Data: "\uB9CC\uD654\uCC45"
     - Name: en
       Entry: 1
       Data: 
@@ -148,7 +148,7 @@ MonoBehaviour:
       Data: Item_Name_3
     - Name: ko
       Entry: 1
-      Data: "\uD584\uC2A4\uD130"
+      Data: "\uBD80\uCC44"
     - Name: en
       Entry: 1
       Data: 
@@ -181,7 +181,7 @@ MonoBehaviour:
       Data: Item_Name_4
     - Name: ko
       Entry: 1
-      Data: "\uACE0\uC2B4\uB3C4\uCE58"
+      Data: "\uBA38\uADF8\uCEF4"
     - Name: en
       Entry: 1
       Data: 
@@ -214,7 +214,7 @@ MonoBehaviour:
       Data: Item_Name_5
     - Name: ko
       Entry: 1
-      Data: "\uD558\uB298\uC0C9\uBA38\uB9AC \uC5EC\uCE90"
+      Data: "\uD0DC\uD53C\uC2A4\uD2B8\uB9AC"
     - Name: en
       Entry: 1
       Data: 
@@ -247,7 +247,7 @@ MonoBehaviour:
       Data: Item_Name_6
     - Name: ko
       Entry: 1
-      Data: "\uAC74\uB2F4"
+      Data: "\uD558\uB298\uC0C9\uBA38\uB9AC \uC5EC\uCE90 \uD53C\uADDC\uC5B4"
     - Name: en
       Entry: 1
       Data: 
@@ -280,7 +280,7 @@ MonoBehaviour:
       Data: Item_Name_7
     - Name: ko
       Entry: 1
-      Data: "\uBBFC\uD2B8 \uBA38\uB9AC \uC5EC\uCE90"
+      Data: "\uAC74\uB2F4"
     - Name: en
       Entry: 1
       Data: 
@@ -313,7 +313,7 @@ MonoBehaviour:
       Data: Item_Name_8
     - Name: ko
       Entry: 1
-      Data: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
+      Data: "\uBBFC\uD2B8 \uBA38\uB9AC \uC5EC\uCE90 \uD53C\uADDC\uC5B4"
     - Name: en
       Entry: 1
       Data: 
@@ -346,7 +346,7 @@ MonoBehaviour:
       Data: Item_Name_9
     - Name: ko
       Entry: 1
-      Data: "\uC695\uB9DD\uC758\uD56D\uC544\uB9AC"
+      Data: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
     - Name: en
       Entry: 1
       Data: 
@@ -379,7 +379,7 @@ MonoBehaviour:
       Data: Item_Name_10
     - Name: ko
       Entry: 1
-      Data: "\uB3CC\uD558\uB974\uBC29(?)"
+      Data: "\uC695\uB9DD\uC758\uD56D\uC544\uB9AC"
     - Name: en
       Entry: 1
       Data: 
@@ -406,67 +406,67 @@ MonoBehaviour:
       Data: 
   dataArr:
   - Key: Item_Name_0
-    ko: "\uC5F0\uB450\uC0C9\uACF5\uB8E1"
+    ko: "\uB9CC\uC96C"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_1
-    ko: "\uC9C4\uB3D7\uAC1C"
+    ko: "\uD2F0\uC154\uCE20"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_2
-    ko: "\uCF54\uB07C\uB9AC\uB543\uC950"
+    ko: "\uB9CC\uD654\uCC45"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_3
-    ko: "\uD584\uC2A4\uD130"
+    ko: "\uBD80\uCC44"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_4
-    ko: "\uACE0\uC2B4\uB3C4\uCE58"
+    ko: "\uBA38\uADF8\uCEF4"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_5
-    ko: "\uD558\uB298\uC0C9\uBA38\uB9AC \uC5EC\uCE90"
+    ko: "\uD0DC\uD53C\uC2A4\uD2B8\uB9AC"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_6
-    ko: "\uAC74\uB2F4"
+    ko: "\uD558\uB298\uC0C9\uBA38\uB9AC \uC5EC\uCE90 \uD53C\uADDC\uC5B4"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_7
-    ko: "\uBBFC\uD2B8 \uBA38\uB9AC \uC5EC\uCE90"
+    ko: "\uAC74\uB2F4"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_8
-    ko: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
+    ko: "\uBBFC\uD2B8 \uBA38\uB9AC \uC5EC\uCE90 \uD53C\uADDC\uC5B4"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_9
-    ko: "\uC695\uB9DD\uC758\uD56D\uC544\uB9AC"
+    ko: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
     en: 
     Jp: 
     Ch: 
     TW: 
   - Key: Item_Name_10
-    ko: "\uB3CC\uD558\uB974\uBC29(?)"
+    ko: "\uC695\uB9DD\uC758\uD56D\uC544\uB9AC"
     en: 
     Jp: 
     Ch: 
