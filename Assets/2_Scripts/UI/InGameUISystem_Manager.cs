@@ -40,10 +40,12 @@ public class InGameUISystem_Manager : MonoBehaviour
 
     private void Sound_BgnStart_Func()
     {
+        SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
+
         //Cargold.FrameWork.SoundSystem_Bgm_Script a_BgmIntro = SoundSystem_Manager.Instance.Get_PlayBgm_Func(BgmType.인게임BGMintro);
-        ////a_BgmIntro.PlayEndToStart_Func(() => 
-        ////{
-        ////    SoundSystem_Manager.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
-        ////});
+        //a_BgmIntro.PlayEndToStart_Func(() =>
+        //{
+        //    SoundSystem_Manager.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
+        //});
     }
 }

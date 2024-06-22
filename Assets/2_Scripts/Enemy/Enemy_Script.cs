@@ -11,6 +11,8 @@ public class Enemy_Script : MonoBehaviour
     [SerializeField, LabelText("애니메이터")] private Animator _anim;
     [SerializeField, LabelText("사촌동생 초기 스케일값")] private Vector3 _enemyStartScale;
 
+    [SerializeField, LabelText("아이템 출발 위치")] private Transform _itemSpawnPoint;
+
     [LabelText("움직일 방향 벡터")] private Vector2 _movedir;
     [LabelText("움직임 벨로시티 값")] private Vector2 _enemyMoveVelocity;
 
@@ -84,7 +86,7 @@ public class Enemy_Script : MonoBehaviour
 
     public void Spawn_ItemSpawn_Func()
     {
-        ItemSystem_Manager.Instance.Start_ItemSpawn_Func(this.transform.position, this.is_Up);
+        ItemSystem_Manager.Instance.Start_ItemSpawn_Func(this._itemSpawnPoint.position, this.is_Up);
         Coroutine_C.Invoke_Func(() => { this._horizontal = this.RandomMoveDir_Func(); }, DataBase_Manager.Instance.GetTable_Define.enemy_StopTime);
     }
 

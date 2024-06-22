@@ -30,6 +30,10 @@ MonoBehaviour:
     volume: 0.8
     bgmType:
       ID: 2
+  - clip: {fileID: 8300000, guid: 0d1f3b8b282fe2842bca67d78e64e244, type: 3}
+    volume: 0.16346154
+    bgmType:
+      ID: 3
   sfxDataArr:
   - clip: {fileID: 8300000, guid: cc1b5689525836046ad92a8796aa5b46, type: 3}
     volume: 0.8

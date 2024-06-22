@@ -75,17 +75,17 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         {
             UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(-(this._myData.ItemScore));
             //효과음
-            SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.떨어지는효과음);
+            SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.떨어지는효과음);
 
             bool a_Random = Random.Range(0, 2) == 0 ? true : false;
 
             if(a_Random == true)
             {
-                SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.소름1);
+                SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.소름1);
             }
             else
             {
-                SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.소름2);
+                SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.소름2);
             }
 
             //플레이어 캐치 실패 UI 출력
@@ -102,12 +102,12 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         if(a_Distance <= DataBase_Manager.Instance.GetTable_Define.chtch_PerpectPersent)
         {
             //퍼펙트 UI 출력
-            SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.퍼펙트);
+            SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.퍼펙트);
         }
         else
         {
             //굿 UI 출력
-            SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.굿);
+            SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.굿);
         }
 
     }

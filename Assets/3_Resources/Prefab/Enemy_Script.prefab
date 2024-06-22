@@ -167,6 +167,7 @@ MonoBehaviour:
   _rigid: {fileID: 2191529493104019487}
   _anim: {fileID: 2240359832162339512}
   _enemyStartScale: {x: 0.7, y: 0.7, z: 0.7}
+  _itemSpawnPoint: {fileID: 444684322259505173}
   _horizontal: 0
 --- !u!95 &2240359832162339512
 Animator:
