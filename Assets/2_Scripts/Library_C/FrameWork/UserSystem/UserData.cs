@@ -10,9 +10,13 @@ public class UserData : Cargold.FrameWork.UserData_C
 {
     public List<UserWealthData> userWealthDataList;
 
+    public UserPlayInfo userPlayInfo;
+
     public UserData()
     {
         this.userWealthDataList = new List<UserWealthData>();
+
+        this.userPlayInfo = new UserPlayInfo();
     }
 }
 
@@ -55,6 +59,21 @@ public class UserWealthData : Cargold.FrameWork.UserSystem_Manager.Wealth_C<Weal
         {
             return false;
         }
+    }
+}
+#endregion
+
+#region UserPlayInfo
+[System.Serializable]
+public class UserPlayInfo
+{
+    public int score;
+    public int itemCount;
+
+    public UserPlayInfo(int a_StartScore = 0, int a_StartCount = 0)
+    {
+        this.score = a_StartScore;
+        this.itemCount = a_StartCount;
     }
 }
 #endregion

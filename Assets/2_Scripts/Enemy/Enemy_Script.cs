@@ -4,7 +4,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using Cargold;
 
-public class EnemySystem_Script : MonoBehaviour
+public class Enemy_Script : MonoBehaviour
 {
     //좌우로 돌아다니며 아이템을 떨굼.
     [SerializeField, LabelText("리지드바디")] private Rigidbody2D _rigid;

@@ -52,7 +52,12 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
 
         if(is_Player == true)
         {
-            UserSystem_Manager.Instance.wealth.TryGetWealthControl_Func(UserSystem_Manager.WealthControl.Earn, WealthType.Score, _myData.ItemScore);
+            UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(this._myData.ItemScore);
+            EnemySystem_Manager.Instance.Check_EnemySpawnCondition_Func();
+        }
+        else
+        {
+            UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(-(this._myData.ItemScore));
         }
 
         ItemSystem_Manager.Instance.Set_CountDown_Func();

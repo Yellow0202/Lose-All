@@ -44,6 +44,7 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
         _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
 
         this._curItemSpawnCount++;
+        UserSystem_Manager.Instance.playInfo.Set_ItemCountPlayInfo_Func();
     }
 
     private IEnumerator ItemSpawn_Cor()
