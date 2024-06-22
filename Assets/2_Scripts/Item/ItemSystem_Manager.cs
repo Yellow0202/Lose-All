@@ -31,19 +31,19 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
         }
     }
 
-    public void Start_ItemSpawn_Func(Vector2 a_SpawnVec)
+    public void Start_ItemSpawn_Func(Vector2 a_SpawnVec, bool is_up)
     {
-        this.ItemSpawn_Func(a_SpawnVec);
+        this.ItemSpawn_Func(a_SpawnVec, is_up);
     }
 
-    private void ItemSpawn_Func(Vector2 a_SpawnVec)
+    private void ItemSpawn_Func(Vector2 a_SpawnVec, bool is_Up)
     {
         float a_Persent = Random.Range(0, 100.0f);
         Item_InfoData a_ItemData = this.Get_ItemRareToItemData_Func(a_Persent);
 
         //아이템 소환
         ItemPooling_Script _ItemPrefab = PoolingSystem_Manager.Instance.Spawn_Func<ItemPooling_Script>(PoolingKey.ItempPoolingKey);
-        _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
+        _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec, is_Up);
 
         this._curItemSpawnCount++;
         UserSystem_Manager.Instance.playInfo.Set_ItemCountPlayInfo_Func();
@@ -75,7 +75,7 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
 
                     //아이템 소환
                     ItemPooling_Script _ItemPrefab = PoolingSystem_Manager.Instance.Spawn_Func<ItemPooling_Script>(PoolingKey.ItempPoolingKey);
-                    _ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
+                    //_ItemPrefab.Setting_Func(a_ItemData, a_SpawnVec);
 
                     this._curItemSpawnCount++;
                 }

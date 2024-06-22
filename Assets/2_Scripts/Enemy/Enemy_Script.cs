@@ -8,15 +8,20 @@ public class Enemy_Script : MonoBehaviour
 {
     //좌우로 돌아다니며 아이템을 떨굼.
     [SerializeField, LabelText("리지드바디")] private Rigidbody2D _rigid;
+    [SerializeField, LabelText("애니메이터")] private Animator _anim;
+    [SerializeField, LabelText("사촌동생 초기 스케일값")] private Vector3 _enemyStartScale;
 
     [LabelText("움직일 방향 벡터")] private Vector2 _movedir;
     [LabelText("움직임 벨로시티 값")] private Vector2 _enemyMoveVelocity;
+
+    [LabelText("아이템 던지기 쿨타임")] private float _curSpawnaTime;
+    [LabelText("아이템을 위로 던질지 말지")] private bool is_Up;
+
     [SerializeField, LabelText("이동속도"), ReadOnly] private float _enemyMoveSpeed => DataBase_Manager.Instance.GetTable_Define.enemy_MoveSpeed;
     [SerializeField, LabelText("좌우 방향"), ReadOnly] private float _horizontal;
 
-    [SerializeField, LabelText("현재 벽에 닿았는지"), ReadOnly] private bool is_GuardEnter = false;
-
     [LabelText("아이템 스폰 코루틴 관리 변수")] private CoroutineData _itemSpawnCorData;
+
 
     private void Start()
     {
@@ -43,30 +48,26 @@ public class Enemy_Script : MonoBehaviour
 
     private IEnumerator ItemSpawn_Cor()
     {
-        float a_CurSpawnaTime = DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime;
-        float a_MoveDir = 0.0f;
+        this._curSpawnaTime = 0;
 
         while(true)
         {
-            if (DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime <= a_CurSpawnaTime)
+            if (DataBase_Manager.Instance.GetTable_Define.item_Spawn_CoolTime <= _curSpawnaTime)
             {
-                a_MoveDir = this._horizontal;
+                //동작을 취함.
+                //던지고 마무리에 아이템 생성.
+                //아이템 생성 후 다시금 타이머 가동.
 
-                if(a_MoveDir == 0)
-                    a_MoveDir = this.RandomMoveDir_Func();
-
-                if (this.is_GuardEnter == true)
-                    a_MoveDir *= -1;
-
+                this._curSpawnaTime = 0.0f;
                 this._horizontal = 0.0f;
 
-                a_CurSpawnaTime = 0.0f;
-                ItemSystem_Manager.Instance.Start_ItemSpawn_Func(this.transform.position);
+                this.is_Up = Random.Range(0, 2) == 0 ? true : false;
 
-                Coroutine_C.Invoke_Func(() => { this._horizontal = a_MoveDir; }, DataBase_Manager.Instance.GetTable_Define.enemy_StopTime);
+                this._anim.SetBool("Is_On", this.is_Up);
+                this._anim.SetTrigger("ItemSpawn");
             }
             else
-                a_CurSpawnaTime += Time.deltaTime;
+                this._curSpawnaTime += Time.deltaTime;
 
             yield return null;
         }
@@ -74,35 +75,78 @@ public class Enemy_Script : MonoBehaviour
         yield return null;
     }
 
+    public void Spawn_ItemSpawn_Func()
+    {
+        ItemSystem_Manager.Instance.Start_ItemSpawn_Func(this.transform.position, this.is_Up);
+        Coroutine_C.Invoke_Func(() => { this._horizontal = this.RandomMoveDir_Func(); }, DataBase_Manager.Instance.GetTable_Define.enemy_StopTime);
+    }
+
     private int RandomMoveDir_Func()
     {
-        bool is_Rigth = Random.Range(0, 2) == 1 ? true : false;
+        int is_Move = Random.Range(0, 3);
 
-        if (is_Rigth == true)
+        if (is_Move == 0)
+        {
+            this._anim.SetInteger("Move", 1);
+
+            if (0.0f < this._enemyStartScale.x)
+                this._enemyStartScale.x *= -1;
+
+            this.transform.localScale = this._enemyStartScale;
+
             return 1;
-        else
+        }
+        else if (is_Move == 1)
+        {
+            this._anim.SetInteger("Move", -1);
+
+            if (this._enemyStartScale.x < 0.0f)
+                this._enemyStartScale.x *= -1;
+
+            this.transform.localScale = this._enemyStartScale;
+
             return -1;
+        }
+        else if (is_Move == 2)
+        {
+            this._anim.SetInteger("Move", 0);
+
+            return 0;
+        }
+        else
+            return 1;
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Guard")
         {
-            this.is_GuardEnter = true;
             this._horizontal *= -1;
+
+            if (this._horizontal == 1)
+            {
+                if (0.0f < this._enemyStartScale.x)
+                    this._enemyStartScale.x *= -1;
+
+                this._anim.SetInteger("Move", 1);
+            }
+            else if (this._horizontal == -1)
+            {
+                if (this._enemyStartScale.x < 0.0f)
+                    this._enemyStartScale.x *= -1;
+
+                this._anim.SetInteger("Move", -1);
+            }
+            else
+            {
+                this._anim.SetInteger("Move", 0);
+            }
+
+            this.transform.localScale = this._enemyStartScale;
+
 
             if (this._horizontal == 0)
                 this._horizontal = this.RandomMoveDir_Func();
-
-            //벽에 부딪혔을 때 0이었어서 반대로 가지 않는 경우가 생김. 0으로 만들지 말던가? 귀찮아짐.
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Guard")
-        {
-            this.is_GuardEnter = false;
         }
     }
 }

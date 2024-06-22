@@ -27,7 +27,7 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
 
     }
 
-    public void Setting_Func(Item_InfoData a_ItemData, Vector2 a_SpawnPos)
+    public void Setting_Func(Item_InfoData a_ItemData, Vector2 a_SpawnPos, bool is_Up)
     {
         this._myData = a_ItemData;
 
@@ -45,12 +45,16 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         this._itemRid.mass = a_ItemData.Mass;
         this._itemRid.gravityScale = DataBase_Manager.Instance.GetTable_Define.item_Falling_Speed;
 
-        //스폰시 살짝 위로 올라가야함.
-        Vector2 a_StartMoveVec = Vector2.zero;
-        a_StartMoveVec.x = Random.Range(-3, 4);
-        a_StartMoveVec.y = 5;
+        if(is_Up == true)
+        {
+            //스폰시 살짝 위로 올라가야함.
+            Vector2 a_StartMoveVec = Vector2.zero;
+            a_StartMoveVec.x = Random.Range(-3, 4);
+            a_StartMoveVec.y = 5;
 
-        this._itemRid.velocity = a_StartMoveVec;
+
+            this._itemRid.velocity = a_StartMoveVec;
+        }
     }
 
     private void Delete_Func(bool is_Player = false)
