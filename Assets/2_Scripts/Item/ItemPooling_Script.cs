@@ -61,7 +61,8 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
 
         if(is_Player == true)
         {
-            InGameUiAnim_Script.Instance.Call_ItemAnim_Func(this._myData.IntKey);
+            if (InGameUISystem_Manager.s_GameState == GameState.Playing)
+                InGameUiAnim_Script.Instance.Call_ItemAnim_Func(this._myData.IntKey);
 
             UserSystem_Manager.Instance.playInfo.Set_ScorePlayInfo_Func(this._myData.ItemScore);
             EnemySystem_Manager.Instance.Check_CurGetScoreToItemCoolTimeDown_Func(this._myData.ItemScore);
@@ -73,8 +74,12 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         }
         else
         {
-            UserSystem_Manager.Instance.playInfo.Set_SmashedScorePlayInfo_Func(this._myData.ItemScore);
-            UserSystem_Manager.Instance.playInfo.Set_SmashedItemCountPlayInfo_Func();
+            if(InGameUISystem_Manager.s_GameState == GameState.Playing)
+            {
+                UserSystem_Manager.Instance.playInfo.Set_SmashedScorePlayInfo_Func(this._myData.ItemScore);
+                UserSystem_Manager.Instance.playInfo.Set_SmashedItemCountPlayInfo_Func();
+            }
+
 
             //효과음
             SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.떨어지는효과음);

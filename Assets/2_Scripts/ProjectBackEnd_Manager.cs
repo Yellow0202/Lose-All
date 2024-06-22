@@ -8,6 +8,8 @@ public class ProjectBackEnd_Manager : BackEnd_Manager
 {
     public static ProjectBackEnd_Manager Instance;
 
+    public static string s_playerName;
+
     public override void Init_Func(int _layer)
     {
         base.Init_Func(_layer);
@@ -43,11 +45,13 @@ public class ProjectBackEnd_Manager : BackEnd_Manager
 
         if (is_Success == false)
             return;
+
+        s_playerName = _id;
     }
 
-    public void RangkUpdate_Func()
+    public void RangkUpdate_Func(int a_Score)
     {
-        this.SetRank_Func(this.rankUuid, this.tableName, this.gameDataColumn, UserSystem_Manager.Instance.playInfo.Get_ScorePlayInfo_Func());
+        this.SetRank_Func(this.rankUuid, this.tableName, this.gameDataColumn, a_Score);
     }
 
 }

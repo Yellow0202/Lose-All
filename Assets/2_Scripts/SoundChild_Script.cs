@@ -23,6 +23,12 @@ public class SoundChild_Script : SoundSystem_Manager
         }
     }
 
+    public void Stop_Bgm_Func()
+    {
+        this._bgnFirstSource.Stop();
+        this._bgnFirstSource.clip = null;
+    }
+
     public void Play_SFXSound_Func(SfxType a_Sfxtype)
     {
         if (this.sfxDataDic.TryGetValue(a_Sfxtype, out Sound_C.SfxData a_Value))

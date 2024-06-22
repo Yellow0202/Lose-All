@@ -38,14 +38,14 @@ public class UI_Result_RankingSlot : MonoBehaviour
     {
         textMeshProUGUI_Rank.SetText("{0}", InRank);
         textMeshProUGUI_Name.SetText(InName);
-        textMeshProUGUI_Name.SetText("{0}", InScore);
+        textMeshProUGUI_Score.SetText("{0}", InScore);
 
         if (IsNew)
         {
             image_Background.sprite = sprite_New;
             image_New.gameObject.SetActive(true);
         }
-        else if(InRank >= 3)
+        else if(InRank <= 3)
         {
             image_Background.sprite = sprite_Top3;
             image_New.gameObject.SetActive(false);

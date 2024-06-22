@@ -16,6 +16,7 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
     public Log log;
     public Wealth wealth;
     public PlayInfo playInfo;
+    public LoginData loginData;
 
     public override Common_C GetCommon => this.common;
     public override Log_C GetLog => this.log;
@@ -32,6 +33,7 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
 
         this.wealth.Init_Func(_layer);
         this.playInfo.Init_Func(_layer);
+        this.loginData.Init_Func(_layer);
     }
 
     protected override void OnLoadUserDataStr_Func(string _userDataStr)
@@ -171,6 +173,36 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
         public int Get_SmashedItemCountPlayInfo_Func()
         {
             return this.GetData.smashedItemCount;
+        }
+    }
+    #endregion
+    #region LoginData
+    [System.Serializable]
+    public class LoginData
+    {
+        private UserLoginData GetData => Instance.userData.userLoginData;
+
+        public void Init_Func(int _layer)
+        {
+            if(_layer == 0)
+            {
+
+            }
+        }
+
+        public void Set_UserNameData_Func(string a_UserName)
+        {
+            this.GetData.userName = a_UserName;
+        }
+
+        public void Set_UserScoreData_Func(int a_Score)
+        {
+            this.GetData.userScore = a_Score;
+        }
+
+        public UserLoginData Get_UserData_Func()
+        {
+            return this.GetData;
         }
     }
     #endregion

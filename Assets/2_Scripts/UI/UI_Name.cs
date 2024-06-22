@@ -67,6 +67,9 @@ public class UI_Name : MonoSingleton<UI_Name>
             return;
         }
 
+        UserSystem_Manager.Instance.loginData.Set_UserNameData_Func(a_InputStr);
+        SoundChild_Script.Instance.Stop_Bgm_Func();
+
         //해당 닉네임으로 로그인 됨.
         //게임으로 넘어감.
         SceneManager.LoadScene("InGame");

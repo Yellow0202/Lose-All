@@ -11,12 +11,14 @@ public class UserData : Cargold.FrameWork.UserData_C
     public List<UserWealthData> userWealthDataList;
 
     public UserPlayInfo userPlayInfo;
+    public UserLoginData userLoginData;
 
     public UserData()
     {
         this.userWealthDataList = new List<UserWealthData>();
 
         this.userPlayInfo = new UserPlayInfo();
+        this.userLoginData = new UserLoginData();
     }
 }
 
@@ -78,6 +80,20 @@ public class UserPlayInfo
         this.itemCount = a_StartCount;
         this.smashedScore = a_StartSmashedScore;
         this.smashedItemCount = StartSmashedItemCount;
+    }
+}
+#endregion
+#region UserLoginData
+[System.Serializable]
+public class UserLoginData
+{
+    public string userName;
+    public int userScore;
+
+    public UserLoginData(string a_UserName = "", int a_UserScore = 0)
+    {
+        this.userName = a_UserName;
+        this.userScore = a_UserScore;
     }
 }
 #endregion

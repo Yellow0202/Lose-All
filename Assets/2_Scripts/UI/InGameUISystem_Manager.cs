@@ -24,12 +24,6 @@ public class InGameUISystem_Manager : MonoBehaviour
 
     [SerializeField, FoldoutGroup("플레이어"), LabelText("플레이어")] private PlayerMove_Script _playerMove_Script; public PlayerMove_Script playerMove_Script => this._playerMove_Script;
 
-    [Button("기록")]
-    private void abc()
-    {
-        ProjectBackEnd_Manager.Instance.RangkUpdate_Func();
-    }
-
     private void Awake()
     {
         Instance = this;
@@ -48,6 +42,9 @@ public class InGameUISystem_Manager : MonoBehaviour
         //텍스트
         this.Score_Update_Func();
         this.SmashedScore_Update_Func();
+
+        //플레이어 이름 유저데이터에 저장
+        UserSystem_Manager.Instance.loginData.Set_UserNameData_Func(ProjectBackEnd_Manager.s_playerName);
 
         s_GameState = GameState.Playing;
     }
@@ -77,6 +74,12 @@ public class InGameUISystem_Manager : MonoBehaviour
     private void GameOver_ManagerFuncs_Func()
     {
         s_GameState = GameState.GameOver;
-        Debug.Log("게임오버");
+
+        int a_TotalScore = UserSystem_Manager.Instance.playInfo.Get_ScorePlayInfo_Func() - UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func();
+        UserSystem_Manager.Instance.loginData.Set_UserScoreData_Func(a_TotalScore);
+
+        //연출 애니메이션 호출.
+        //연출 애니메이션 종료 후 랭킹 갱신. 갱신 후 랭킹 애니메이션 호출
+        UI_Result.Instance.Result_RankingCall_Func();
     }
 }
