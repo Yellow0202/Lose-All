@@ -17,6 +17,8 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
 
     [SerializeField, LabelText("온오프 딕셔너리 리스트")] private Dictionary<int, List<GameObject>> _intKeyToGameObjectListDataDic => InGameUISystem_Manager.Instance.intKeyToGameObjectListDataDic;
 
+    [SerializeField, LabelText("생성 파티클")] private ParticleSystem _onParticle => InGameUISystem_Manager.Instance.particle_ItemObjOn;
+
     public void Init_Func(int _layer)
     {
         if (_layer == 0)
@@ -112,13 +114,15 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
 
     public void Call_ItemGameObject_Func(int a_Intkey)
     {   //획득한 아이템의 아이템 키에 맞는 리스트를 뽑아와 꺼져 있는 대상을 켜준다. 모두 켜져있다면 딕셔너리에서 삭제시킨다.
-        if(this._intKeyToGameObjectListDataDic.TryGetValue(a_Intkey, out List<GameObject> a_VlaueList))
+        if(this._intKeyToGameObjectListDataDic.TryGetValue(a_Intkey, out List<GameObject> a_ValueList))
         {
-            for (int i = 0; i < a_VlaueList.Count; i++)
+            for (int i = 0; i < a_ValueList.Count; i++)
             {
-                if(a_VlaueList[i].gameObject.activeSelf == false)
+                if(a_ValueList[i].gameObject.activeSelf == false)
                 {
-                    a_VlaueList[i].SetActive(true);
+                    a_ValueList[i].SetActive(true);
+                    this._onParticle.transform.position = a_ValueList[i].transform.position;
+                    this._onParticle.Play();
                     return;
                 }
             }

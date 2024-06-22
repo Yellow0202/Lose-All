@@ -25,10 +25,11 @@ public class InGameUISystem_Manager : SerializedMonoBehaviour
     [SerializeField, FoldoutGroup("UI"), LabelText("토탈 스코어 텍스트")] private TextMeshProUGUI _ui_TotalScoreText;
     [SerializeField, FoldoutGroup("UI"), LabelText("토탈 부순 피규어 텍스트")] private TextMeshProUGUI _ui_TotalSmashedText;
     [SerializeField, FoldoutGroup("UI"), LabelText("플레이어 스코어 등 정보 게임오브젝트")] private GameObject _ui_PlayerScoreInfoObj;
+    [SerializeField, FoldoutGroup("UI"), LabelText("카운트 다운 텍스트 메쉬")] private TextMeshProUGUI _ui_CountDownText;
 
     [SerializeField, FoldoutGroup("플레이어"), LabelText("플레이어")] private PlayerMove_Script _playerMove_Script; public PlayerMove_Script playerMove_Script => this._playerMove_Script;
 
-
+    [SerializeField, FoldoutGroup("파티클"), LabelText("아이템 오브젝트 온오프 스타 파티클")] private ParticleSystem _particle_ItemObjOn; public ParticleSystem particle_ItemObjOn => this._particle_ItemObjOn;
 
     private void Awake()
     {
@@ -38,6 +39,31 @@ public class InGameUISystem_Manager : SerializedMonoBehaviour
 
 
     public void Start_ManagerFuncs_Func()
+    {
+        StartCoroutine(Start_CountDown_Cor());
+    }
+
+    private IEnumerator Start_CountDown_Cor()
+    {
+        this._ui_CountDownText.gameObject.SetActive(true);
+
+        this._ui_CountDownText.text = "3";
+        yield return Coroutine_C.GetWaitForSeconds_Cor(1.0f);
+        this._ui_CountDownText.text = "2";
+        yield return Coroutine_C.GetWaitForSeconds_Cor(1.0f);
+        this._ui_CountDownText.text = "1";
+        yield return Coroutine_C.GetWaitForSeconds_Cor(1.0f);
+        this._ui_CountDownText.text = "START";
+
+        yield return Coroutine_C.GetWaitForSeconds_Cor(1.0f);
+        this._ui_CountDownText.gameObject.SetActive(false);
+        this.Setting_StartValue_Func();
+
+        yield return null;
+        StopCoroutine(Start_CountDown_Cor());
+    }
+
+    public void Setting_StartValue_Func()
     {
         EnemySystem_Manager.Instance.Spawn_EnemyCharactor_Func();
         PlayerSystem_Manager.Instance.Start_PlayerSystem_Manger();

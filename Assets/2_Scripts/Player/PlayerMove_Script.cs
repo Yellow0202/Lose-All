@@ -11,6 +11,8 @@ public class PlayerMove_Script : MonoBehaviour
 
     [SerializeField, LabelText("플레이어 슬라이딩 가속도")] private int _moveboost;
 
+    [SerializeField, LabelText("슬라이드 파티클")] private ParticleSystem _slidingParticle;
+
     [LabelText("캐릭터 리지드바디")] private Rigidbody2D _rigid;
     [LabelText("캐릭터 애니메이터")] private Animator _anim;
     [LabelText("플레이어 이동속도")] private float _moveSpeed => PlayerSystem_Manager.Instance.player_MoveSpeed;
@@ -73,6 +75,9 @@ public class PlayerMove_Script : MonoBehaviour
         {
             this._anim.SetTrigger("Silde_On");
             this.is_SlidingOn = true;
+
+            this._slidingParticle.transform.position = new Vector2(this.transform.position.x, this._slidingParticle.transform.position.y);
+            this._slidingParticle.Play();
         }
     }
 

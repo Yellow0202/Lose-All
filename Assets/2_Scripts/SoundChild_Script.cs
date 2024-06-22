@@ -25,8 +25,9 @@ public class SoundChild_Script : SoundSystem_Manager
 
     public void Stop_Bgm_Func()
     {
-        this._bgnFirstSource.Stop();
         this._bgnFirstSource.clip = null;
+        this._bgnFirstSource.loop = false;
+        this._bgnFirstSource.Stop();
     }
 
     public void Play_SFXSound_Func(SfxType a_Sfxtype)
