@@ -25,6 +25,7 @@ public class InGameUiAnim_Script : MonoBehaviour
 
     private void TrapCardAnimation_Func()
     {
+        SoundSystem_Manager.Instance.PlaySfx_Func(SfxType.함정카드);
         this._trapCardAnim.Play("TrapCard_Anim");
     }
 }

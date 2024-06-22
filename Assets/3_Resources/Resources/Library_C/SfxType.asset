@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib]], Sirenix.OdinInspector.Attributes]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 9
     - Name: 
       Entry: 7
       Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
@@ -55,6 +55,97 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uB5A8\uC5B4\uC9C0\uB294\uD6A8\uACFC\uC74C"
+    - Name: Value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uC720\uB839"
+    - Name: Value
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uAD7F"
+    - Name: Value
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uC778\uAC8C\uC784BGMintro"
+    - Name: Value
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uD130\uCE58\uC74C"
+    - Name: Value
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uD37C\uD399\uD2B8"
+    - Name: Value
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uD568\uC815\uCE74\uB4DC"
+    - Name: Value
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -67,7 +158,28 @@ MonoBehaviour:
   - nameStr: UI_Normal
     uid: 2000000000
     stringDropdownClass: {fileID: 11400000}
-  currentUidNum: 1
+  - nameStr: "\uB5A8\uC5B4\uC9C0\uB294\uD6A8\uACFC\uC74C"
+    uid: 1
+    stringDropdownClass: {fileID: 11400000}
+  - nameStr: "\uC720\uB839"
+    uid: 2
+    stringDropdownClass: {fileID: 11400000}
+  - nameStr: "\uAD7F"
+    uid: 3
+    stringDropdownClass: {fileID: 11400000}
+  - nameStr: "\uC778\uAC8C\uC784BGMintro"
+    uid: 4
+    stringDropdownClass: {fileID: 11400000}
+  - nameStr: "\uD130\uCE58\uC74C"
+    uid: 5
+    stringDropdownClass: {fileID: 11400000}
+  - nameStr: "\uD37C\uD399\uD2B8"
+    uid: 6
+    stringDropdownClass: {fileID: 11400000}
+  - nameStr: "\uD568\uC815\uCE74\uB4DC"
+    uid: 7
+    stringDropdownClass: {fileID: 11400000}
+  currentUidNum: 8
   isDataChanged: 0
   isMustScriptGenerate: 0
   dataTypeStr: SfxType

@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib]], Sirenix.OdinInspector.Attributes]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
@@ -42,6 +42,32 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uC778\uAC8C\uC784BGMLoop"
+    - Name: Value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uD0C0\uC774\uD2C0BGM"
+    - Name: Value
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -51,7 +77,13 @@ MonoBehaviour:
   - nameStr: None
     uid: 0
     stringDropdownClass: {fileID: 11400000}
-  currentUidNum: 1
+  - nameStr: "\uC778\uAC8C\uC784BGMLoop"
+    uid: 1
+    stringDropdownClass: {fileID: 11400000}
+  - nameStr: "\uD0C0\uC774\uD2C0BGM"
+    uid: 2
+    stringDropdownClass: {fileID: 11400000}
+  currentUidNum: 3
   isDataChanged: 0
   isMustScriptGenerate: 0
   dataTypeStr: BgmType

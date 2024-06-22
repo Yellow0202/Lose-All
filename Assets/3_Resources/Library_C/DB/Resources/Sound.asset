@@ -21,6 +21,42 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  bgmDataArr: []
-  sfxDataArr: []
+  bgmDataArr:
+  - clip: {fileID: 8300000, guid: 729f6f74b73502c47bf11fba786610d8, type: 3}
+    volume: 0.8
+    bgmType:
+      ID: 1
+  - clip: {fileID: 8300000, guid: 43a69b802a4b9c5428b4514b4f46042a, type: 3}
+    volume: 0.8
+    bgmType:
+      ID: 2
+  sfxDataArr:
+  - clip: {fileID: 8300000, guid: cc1b5689525836046ad92a8796aa5b46, type: 3}
+    volume: 0.8
+    sfxType:
+      ID: 1
+  - clip: {fileID: 8300000, guid: 8ca46cc96c3d62843bb33dd9b845b5dd, type: 3}
+    volume: 0.8
+    sfxType:
+      ID: 2
+  - clip: {fileID: 8300000, guid: bc20126972ae8e74e9f225bcc53114f2, type: 3}
+    volume: 0.8
+    sfxType:
+      ID: 3
+  - clip: {fileID: 8300000, guid: 0d1f3b8b282fe2842bca67d78e64e244, type: 3}
+    volume: 0.8
+    sfxType:
+      ID: 4
+  - clip: {fileID: 8300000, guid: 6984172098f2c8741b318537bd3aaf91, type: 3}
+    volume: 0.8
+    sfxType:
+      ID: 5
+  - clip: {fileID: 8300000, guid: 7473e1ecef4c7064d87000ffa4b1ed11, type: 3}
+    volume: 0.8
+    sfxType:
+      ID: 6
+  - clip: {fileID: 8300000, guid: 870692119fd997646a0e7e71edc2248e, type: 3}
+    volume: 0.16528925
+    sfxType:
+      ID: 7
   bgmFadeSpeed: 1
