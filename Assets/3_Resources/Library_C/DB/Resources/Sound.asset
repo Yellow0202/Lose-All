@@ -56,7 +56,7 @@ MonoBehaviour:
     sfxType:
       ID: 6
   - clip: {fileID: 8300000, guid: 870692119fd997646a0e7e71edc2248e, type: 3}
-    volume: 0.8
+    volume: 0.16528925
     sfxType:
       ID: 7
   bgmFadeSpeed: 1
