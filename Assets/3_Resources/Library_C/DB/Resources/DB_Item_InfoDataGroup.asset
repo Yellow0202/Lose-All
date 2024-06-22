@@ -15,18 +15,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 831b345c61d0d584d90215b144855cb2, type: 3}
-    - {fileID: 21300000, guid: eee5214b3bb04ba488aa7838b8b71692, type: 3}
-    - {fileID: 21300000, guid: 0ae8da54a32431346b5d55998c599035, type: 3}
-    - {fileID: 21300000, guid: d5c49ee279476aa45b757f6c2362e733, type: 3}
-    - {fileID: 21300000, guid: 932e3b64509108946b0dcafdf16a07dc, type: 3}
-    - {fileID: 21300000, guid: 75f33825013b5064384dfedcb227b718, type: 3}
-    - {fileID: 21300000, guid: 4d9b79959d731594eb74c0778bd1599a, type: 3}
-    - {fileID: 21300000, guid: a8ed8f42092b90c4b945e5003d716182, type: 3}
-    - {fileID: 21300000, guid: 6acca3819a51b774e8ed3ac904ff0ba2, type: 3}
-    - {fileID: 21300000, guid: 852c77859bacbb843855450b7c0a2cc4, type: 3}
-    - {fileID: 21300000, guid: 5c00ff49708f5be4f83f6206d9868395, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -76,9 +65,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 1
-    - Name: Icon
-      Entry: 10
-      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -115,9 +101,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 0.8
-    - Name: Icon
-      Entry: 10
-      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -154,9 +137,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 0.9
-    - Name: Icon
-      Entry: 10
-      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -193,9 +173,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 1.4
-    - Name: Icon
-      Entry: 10
-      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -232,9 +209,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 1.8
-    - Name: Icon
-      Entry: 10
-      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -271,9 +245,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 2
-    - Name: Icon
-      Entry: 10
-      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -310,9 +281,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 1.5
-    - Name: Icon
-      Entry: 10
-      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -349,9 +317,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 1.3
-    - Name: Icon
-      Entry: 10
-      Data: 7
     - Name: 
       Entry: 8
       Data: 
@@ -388,9 +353,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 1.8
-    - Name: Icon
-      Entry: 10
-      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -427,9 +389,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 2
-    - Name: Icon
-      Entry: 10
-      Data: 9
     - Name: 
       Entry: 8
       Data: 
@@ -466,9 +425,6 @@ MonoBehaviour:
     - Name: Mass
       Entry: 4
       Data: 1.5
-    - Name: Icon
-      Entry: 10
-      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -489,7 +445,6 @@ MonoBehaviour:
     IntKey: 10001
     ItemScore: 1500
     Mass: 1
-    Icon: {fileID: 21300000, guid: 831b345c61d0d584d90215b144855cb2, type: 3}
   - Key: Item_10002
     Item_Rare: 1
     Name: Item_Name_1
@@ -497,7 +452,6 @@ MonoBehaviour:
     IntKey: 10002
     ItemScore: 2700
     Mass: 0.8
-    Icon: {fileID: 21300000, guid: eee5214b3bb04ba488aa7838b8b71692, type: 3}
   - Key: Item_10003
     Item_Rare: 1
     Name: Item_Name_2
@@ -505,7 +459,6 @@ MonoBehaviour:
     IntKey: 10003
     ItemScore: 3500
     Mass: 0.9
-    Icon: {fileID: 21300000, guid: 0ae8da54a32431346b5d55998c599035, type: 3}
   - Key: Item_10004
     Item_Rare: 1
     Name: Item_Name_3
@@ -513,7 +466,6 @@ MonoBehaviour:
     IntKey: 10004
     ItemScore: 4500
     Mass: 1.4
-    Icon: {fileID: 21300000, guid: d5c49ee279476aa45b757f6c2362e733, type: 3}
   - Key: Item_10005
     Item_Rare: 1
     Name: Item_Name_4
@@ -521,7 +473,6 @@ MonoBehaviour:
     IntKey: 10005
     ItemScore: 5600
     Mass: 1.8
-    Icon: {fileID: 21300000, guid: 932e3b64509108946b0dcafdf16a07dc, type: 3}
   - Key: Item_10006
     Item_Rare: 1
     Name: Item_Name_5
@@ -529,7 +480,6 @@ MonoBehaviour:
     IntKey: 10006
     ItemScore: 6300
     Mass: 2
-    Icon: {fileID: 21300000, guid: 75f33825013b5064384dfedcb227b718, type: 3}
   - Key: Item_10007
     Item_Rare: 1
     Name: Item_Name_6
@@ -537,7 +487,6 @@ MonoBehaviour:
     IntKey: 10007
     ItemScore: 7700
     Mass: 1.5
-    Icon: {fileID: 21300000, guid: 4d9b79959d731594eb74c0778bd1599a, type: 3}
   - Key: Item_10008
     Item_Rare: 2
     Name: Item_Name_7
@@ -545,7 +494,6 @@ MonoBehaviour:
     IntKey: 10008
     ItemScore: 9900
     Mass: 1.3
-    Icon: {fileID: 21300000, guid: a8ed8f42092b90c4b945e5003d716182, type: 3}
   - Key: Item_10009
     Item_Rare: 2
     Name: Item_Name_8
@@ -553,7 +501,6 @@ MonoBehaviour:
     IntKey: 10009
     ItemScore: 11800
     Mass: 1.8
-    Icon: {fileID: 21300000, guid: 6acca3819a51b774e8ed3ac904ff0ba2, type: 3}
   - Key: Item_10010
     Item_Rare: 2
     Name: Item_Name_9
@@ -561,7 +508,6 @@ MonoBehaviour:
     IntKey: 10010
     ItemScore: 50000
     Mass: 2
-    Icon: {fileID: 21300000, guid: 852c77859bacbb843855450b7c0a2cc4, type: 3}
   - Key: Item_10011
     Item_Rare: 3
     Name: Item_Name_10
@@ -569,7 +515,6 @@ MonoBehaviour:
     IntKey: 10011
     ItemScore: -6000
     Mass: 1.5
-    Icon: {fileID: 21300000, guid: 5c00ff49708f5be4f83f6206d9868395, type: 3}
   keyArr:
   - Item_10001
   - Item_10002

@@ -39,7 +39,7 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         //this._itemCheckPointTr = 
 
         //아이템 이미지 변경
-        this._itemSpriteRenderer.sprite = this._myData.Icon;
+        this._itemSpriteRenderer.sprite = ItemSystem_Manager.Instance.Get_ItemIntKeyToSprite_Func(this._myData.IntKey);
 
         //지정된 리지드바디 값 추가
         this._itemRid.mass = a_ItemData.Mass;

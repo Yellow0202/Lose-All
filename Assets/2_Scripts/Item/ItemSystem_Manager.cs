@@ -13,6 +13,8 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
     [SerializeField, LabelText("현재 생성 갯수"), ReadOnly] private int _curItemSpawnCount;
     [SerializeField, LabelText("현재 생성 시간"), ReadOnly] private float _curItemSpawnTime;
 
+    [SerializeField, LabelText("이미지 딕셔너리 리스트")] private Dictionary<int, List<Sprite>> _intKeyToSpriteListDataDic;
+
     public void Init_Func(int _layer)
     {
         if (_layer == 0)
@@ -96,5 +98,13 @@ public class ItemSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Gam
 
         if (this._curItemSpawnCount < 0)
             this._curItemSpawnCount = 0;
+    }
+
+    public Sprite Get_ItemIntKeyToSprite_Func(int a_intKey)
+    {
+        if (this._intKeyToSpriteListDataDic.TryGetValue(a_intKey, out List<Sprite> a_ValueList))
+            return a_ValueList.GetRandItem_Func();
+        else
+            return null;
     }
 }

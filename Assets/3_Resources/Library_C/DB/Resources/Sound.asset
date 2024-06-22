@@ -23,7 +23,7 @@ MonoBehaviour:
     SerializationNodes: []
   bgmDataArr:
   - clip: {fileID: 8300000, guid: 729f6f74b73502c47bf11fba786610d8, type: 3}
-    volume: 0.8
+    volume: 0.16483517
     bgmType:
       ID: 1
   - clip: {fileID: 8300000, guid: 43a69b802a4b9c5428b4514b4f46042a, type: 3}
@@ -44,7 +44,7 @@ MonoBehaviour:
     sfxType:
       ID: 3
   - clip: {fileID: 8300000, guid: 0d1f3b8b282fe2842bca67d78e64e244, type: 3}
-    volume: 0.8
+    volume: 0.16483517
     sfxType:
       ID: 4
   - clip: {fileID: 8300000, guid: 6984172098f2c8741b318537bd3aaf91, type: 3}
@@ -59,4 +59,12 @@ MonoBehaviour:
     volume: 0.16528925
     sfxType:
       ID: 7
+  - clip: {fileID: 8300000, guid: faa7efa7dcb5da848bcc57f8c30a2e65, type: 3}
+    volume: 0.20652173
+    sfxType:
+      ID: 8
+  - clip: {fileID: 8300000, guid: 6bac61ef72f1a30439249afb0cb6aeff, type: 3}
+    volume: 0.19565217
+    sfxType:
+      ID: 9
   bgmFadeSpeed: 1
