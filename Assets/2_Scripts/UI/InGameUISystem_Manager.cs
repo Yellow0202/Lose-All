@@ -11,6 +11,12 @@ public class InGameUISystem_Manager : MonoBehaviour
     [SerializeField, FoldoutGroup("아이템"), LabelText("스폰지점")] private Transform _itemSpawnPoint; public Transform itemSpawnPoint => _itemSpawnPoint;
     [SerializeField, FoldoutGroup("사촌동생"), LabelText("스폰지점")] private Transform _enemySpawnPoint; public Transform enemySpawnPoint => _enemySpawnPoint;
 
+    [Button("기록")]
+    private void abc()
+    {
+        ProjectBackEnd_Manager.Instance.RangkUpdate_Func();
+    }
+
     private void Awake()
     {
         Instance = this;
