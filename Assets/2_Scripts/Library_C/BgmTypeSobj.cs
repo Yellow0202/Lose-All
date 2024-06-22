@@ -25,7 +25,9 @@ public class BgmTypeSobj : SobjDropdown
 [System.Serializable, InlineProperty, HideLabel]
 public partial struct BgmType
 {
-    // Const
+    
+    public const int 인게임BGMLoop = 1;
+    public const int 타이틀BGM = 2;
 
 #if UNITY_EDITOR
     private IEnumerable GetIEnumerable => BgmTypeSobj.Instance.GetIEnumerable;
