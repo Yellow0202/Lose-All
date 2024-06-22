@@ -40,27 +40,27 @@ public class SoundChild_Script : SoundSystem_Manager
         }
     }
 
-    //public void Start_InGameBgmSound_Func(BgmType a_bgmType)
-    //{   //단순 인게임 사운드를 위한 함수.
-    //    //실패한 자의 흔적... 이럴 수 밖에 없었다.
-    //    if(this.bgmDataDic.TryGetValue(a_bgmType, out Sound_C.BgmData a_Value))
-    //    {
-    //        this._bgnFirstSource.clip = a_Value.clip;
-    //        this._bgnFirstSource.volume = a_Value.volume;
-    //        this._bgnFirstSource.Play();
+    public void Start_InGameBgmSound_Func(BgmType a_bgmType)
+    {   //단순 인게임 사운드를 위한 함수.
+        //실패한 자의 흔적... 이럴 수 밖에 없었다.
+        if (this.bgmDataDic.TryGetValue(a_bgmType, out Sound_C.BgmData a_Value))
+        {
+            this._bgnFirstSource.clip = a_Value.clip;
+            this._bgnFirstSource.volume = a_Value.volume;
+            this._bgnFirstSource.Play();
 
-    //        StartCoroutine(this.Start_InGameBgmSound_Cor());
-    //    }
-    //}
+            StartCoroutine(this.Start_InGameBgmSound_Cor());
+        }
+    }
 
-    //private IEnumerator Start_InGameBgmSound_Cor()
-    //{
-    //    while(this._bgnFirstSource.isPlaying == true)
-    //    {
-    //        yield return null;
-    //    }
+    private IEnumerator Start_InGameBgmSound_Cor()
+    {
+        while (this._bgnFirstSource.isPlaying == true)
+        {
+            yield return null;
+        }
 
-    //    this.PlayBgm_Func(BgmType.인게임BGMLoop);
-    //    StopCoroutine(this.Start_InGameBgmSound_Cor());
-    //}
+        this.PlayBgm_Func(BgmType.인게임BGMLoop);
+        StopCoroutine(this.Start_InGameBgmSound_Cor());
+    }
 }

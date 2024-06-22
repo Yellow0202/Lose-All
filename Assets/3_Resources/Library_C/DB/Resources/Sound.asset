@@ -47,10 +47,6 @@ MonoBehaviour:
     volume: 0.8
     sfxType:
       ID: 3
-  - clip: {fileID: 8300000, guid: 0d1f3b8b282fe2842bca67d78e64e244, type: 3}
-    volume: 0.16483517
-    sfxType:
-      ID: 4
   - clip: {fileID: 8300000, guid: 6984172098f2c8741b318537bd3aaf91, type: 3}
     volume: 0.8
     sfxType:

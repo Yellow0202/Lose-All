@@ -8,9 +8,6 @@ using Cargold.FrameWork;
 public class PlayerSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.GameSystem_Manager.IInitializer
 {
     public static PlayerSystem_Manager Instance;
-
-    [SerializeField, LabelText("플레이어 이동 스크립트")] private PlayerMove_Script _playerMoveScript; public PlayerMove_Script playerMoveScript => this._playerMoveScript;
-
     [SerializeField, FoldoutGroup("플레이어 정보"), LabelText("플레이어 이동속도")] private float _player_MoveSpeed; public float player_MoveSpeed => this._player_MoveSpeed;
 
     public void Init_Func(int _layer)
@@ -25,7 +22,12 @@ public class PlayerSystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.G
         }
         else if(_layer == 2)
         {
-            this._playerMoveScript.Start_PlayerMove_Func();
+
         }
+    }
+
+    public void Start_PlayerSystem_Manger()
+    {
+        InGameUISystem_Manager.Instance.playerMove_Script.Start_PlayerMove_Func();
     }
 }

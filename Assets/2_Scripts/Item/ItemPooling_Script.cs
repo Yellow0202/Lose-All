@@ -101,7 +101,7 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
     private void Check_PositionDistance_Func()
     {
         float a_Distance = 0.0f;
-        a_Distance = Vector2.Distance(this.transform.position, PlayerSystem_Manager.Instance.playerMoveScript.Get_ChtchPointTr_Func().position);
+        a_Distance = Vector2.Distance(this.transform.position, InGameUISystem_Manager.Instance.playerMove_Script.Get_ChtchPointTr_Func().position);
 
         if(a_Distance <= DataBase_Manager.Instance.GetTable_Define.chtch_PerpectPersent)
         {

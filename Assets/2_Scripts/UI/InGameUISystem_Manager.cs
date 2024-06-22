@@ -22,6 +22,8 @@ public class InGameUISystem_Manager : MonoBehaviour
     [SerializeField, FoldoutGroup("UI"), LabelText("토탈 스코어 텍스트")] private TextMeshProUGUI _ui_TotalScoreText;
     [SerializeField, FoldoutGroup("UI"), LabelText("토탈 부순 피규어 텍스트")] private TextMeshProUGUI _ui_TotalSmashedText;
 
+    [SerializeField, FoldoutGroup("플레이어"), LabelText("플레이어")] private PlayerMove_Script _playerMove_Script; public PlayerMove_Script playerMove_Script => this._playerMove_Script;
+
     [Button("기록")]
     private void abc()
     {
@@ -45,6 +47,8 @@ public class InGameUISystem_Manager : MonoBehaviour
         //임시
         EnemySystem_Manager.Instance.Spawn_EnemyCharactor_Func();
 
+        PlayerSystem_Manager.Instance.Start_PlayerSystem_Manger();
+
         //사운드
         this.Sound_BgnStart_Func();
 
@@ -57,9 +61,9 @@ public class InGameUISystem_Manager : MonoBehaviour
 
     private void Sound_BgnStart_Func()
     {
-        //SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
+        SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
 
-        SoundChild_Script.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
+        //SoundChild_Script.Instance.PlayBgm_Func(BgmType.인게임BGMLoop);
 
         //Cargold.FrameWork.SoundSystem_Bgm_Script a_BgmIntro = SoundSystem_Manager.Instance.Get_PlayBgm_Func(BgmType.인게임BGMintro);
         //a_BgmIntro.PlayEndToStart_Func(() =>
