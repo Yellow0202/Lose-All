@@ -38,8 +38,12 @@ public partial class DB_Table_DefineDataGroup
          * 임의의 데이터 재가공을 원한다면 이 밑으로 코드를 작성하시면 됩니다.
          */
 
-        this.item_Spawn_CoolTime = _item_Spawn_CoolTime;
+        this.ReSet_ItemSpeendCoolTime_Func();
+    }
 
+    public void ReSet_ItemSpeendCoolTime_Func()
+    {
+        this.item_Spawn_CoolTime = _item_Spawn_CoolTime;
     }
 
     public void Item_SpawnCoolTimeDown_Func()

@@ -12,6 +12,7 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
     [SerializeField, LabelText("리지드바디")] private Rigidbody2D _itemRid;
 
     [SerializeField, LabelText("도깨비불 파티클")] private ParticleSystem _horrorFire;
+    [SerializeField, LabelText("항아리 파티클")] private ParticleSystem _miusItem;
 
     [SerializeField, LabelText("변경 스케일")] private Vector3 _itemScale;
 
@@ -57,15 +58,31 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             this._itemRid.velocity = a_StartMoveVec;
         }
 
-        if (this.is_Horror == true)
+        if(this._myData.IntKey == 10011)
         {
-            this._horrorFire.gameObject.SetActive(true);
-            this._horrorFire.Play();
+            this._miusItem.gameObject.SetActive(true);
+            this._miusItem.Play();
+
+            this.is_Horror = false;
+
+            this._horrorFire.gameObject.SetActive(false);
+            this._horrorFire.Stop();
         }
         else
         {
-            this._horrorFire.gameObject.SetActive(false);
-            this._horrorFire.Stop();
+            this._miusItem.gameObject.SetActive(false);
+            this._miusItem.Stop();
+
+            if (this.is_Horror == true)
+            {
+                this._horrorFire.gameObject.SetActive(true);
+                this._horrorFire.Play();
+            }
+            else
+            {
+                this._horrorFire.gameObject.SetActive(false);
+                this._horrorFire.Stop();
+            }
         }
     }
 
@@ -91,29 +108,36 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         }
         else
         {
-            if(InGameUISystem_Manager.s_GameState == GameState.Playing)
+            if (InGameUISystem_Manager.s_GameState == GameState.Playing)
             {
                 UserSystem_Manager.Instance.playInfo.Set_SmashedScorePlayInfo_Func(this._myData.ItemScore);
-                UserSystem_Manager.Instance.playInfo.Set_SmashedItemCountPlayInfo_Func();
             }
 
-
-            //효과음
-            SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.떨어지는효과음);
-
-            bool a_Random = Random.Range(0, 2) == 0 ? true : false;
-
-            if(a_Random == true)
+            if (this._myData.IntKey != 10011)
             {
-                SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.소름1);
-            }
-            else
-            {
-                SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.소름2);
-            }
 
-            //플레이어 캐치 실패 UI 출력
-            PlayerSystem_Manager.Instance.Call_ChtchBalloon_Func(ChtchBalloon.miss);
+                if (InGameUISystem_Manager.s_GameState == GameState.Playing)
+                {
+                    UserSystem_Manager.Instance.playInfo.Set_SmashedItemCountPlayInfo_Func();
+                }
+
+                //효과음
+                SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.떨어지는효과음);
+
+                bool a_Random = Random.Range(0, 2) == 0 ? true : false;
+
+                if (a_Random == true)
+                {
+                    SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.소름1);
+                }
+                else
+                {
+                    SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.소름2);
+                }
+
+                //플레이어 캐치 실패 UI 출력
+                PlayerSystem_Manager.Instance.Call_ChtchBalloon_Func(ChtchBalloon.miss);
+            }
 
             if(this.is_Horror == true)
             {

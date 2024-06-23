@@ -98,7 +98,7 @@ public class InGameUISystem_Manager : SerializedMonoBehaviour
     {
         this._ui_TotalSmashedText.text = UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func().ToString("N0") + "원(" + UserSystem_Manager.Instance.playInfo.Get_SmashedItemCountPlayInfo_Func().ToString() + "개)";
 
-        if (DataBase_Manager.Instance.GetTable_Define.gameOverScoreMax <= UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func() ||
+        if (DataBase_Manager.Instance.GetTable_Define.gameOverScoreMax <= (UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func() * -1) ||
             DataBase_Manager.Instance.GetTable_Define.gameOverCountMax <= UserSystem_Manager.Instance.playInfo.Get_SmashedItemCountPlayInfo_Func())
         {
             //게임 오버 상태임.
