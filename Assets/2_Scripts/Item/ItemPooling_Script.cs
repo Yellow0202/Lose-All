@@ -40,7 +40,8 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
         this.transform.localScale = _itemScale;
 
         //아이템 이미지 변경
-        this._itemSpriteRenderer.sprite = ItemSystem_Manager.Instance.Get_ItemIntKeyToSprite_Func(this._myData.IntKey);
+        this._itemSpriteRenderer.sprite = this._myData.Icon;
+        //this._itemSpriteRenderer.sprite = ItemSystem_Manager.Instance.Get_ItemIntKeyToSprite_Func(this._myData.IntKey);
 
         //지정된 리지드바디 값 추가
         this._itemRid.mass = a_ItemData.Mass;
@@ -58,7 +59,7 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
             this._itemRid.velocity = a_StartMoveVec;
         }
 
-        if(this._myData.IntKey == 10011)
+        if(this._myData.IntKey == 10022)
         {
             this._miusItem.gameObject.SetActive(true);
             this._miusItem.Play();
@@ -113,7 +114,7 @@ public class ItemPooling_Script : MonoBehaviour, IPooler
                 UserSystem_Manager.Instance.playInfo.Set_SmashedScorePlayInfo_Func(this._myData.ItemScore);
             }
 
-            if (this._myData.IntKey != 10011)
+            if (this._myData.IntKey != 10022)
             {
 
                 if (InGameUISystem_Manager.s_GameState == GameState.Playing)

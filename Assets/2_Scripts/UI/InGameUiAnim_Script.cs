@@ -25,7 +25,7 @@ public class InGameUiAnim_Script : MonoBehaviour
 
     public void Call_ItemAnim_Func(int a_IntKey)
     {
-        if(a_IntKey == 10011)
+        if(a_IntKey == 10022)
         {   //¿å¸ÁÀÇ Ç×¾Æ¸®.
             this.TrapCardAnimation_Func();
         }
