@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sound
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
+    SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects: []
     SerializedBytesString: 
@@ -67,4 +67,8 @@ MonoBehaviour:
     volume: 0.19565217
     sfxType:
       ID: 9
+  - clip: {fileID: 8300000, guid: 17337a16a7e45cf4d89496eba17c153b, type: 3}
+    volume: 0.8
+    sfxType:
+      ID: 10
   bgmFadeSpeed: 1

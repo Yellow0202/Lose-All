@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib]], Sirenix.OdinInspector.Attributes]], mscorlib
     - Name: 
       Entry: 12
-      Data: 10
+      Data: 11
     - Name: 
       Entry: 7
       Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
@@ -159,6 +159,19 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.ValueDropdownItem`1[[System.Int32, mscorlib]],
+        Sirenix.OdinInspector.Attributes
+    - Name: Text
+      Entry: 1
+      Data: "\uC2AC\uB77C\uC774\uB529"
+    - Name: Value
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -195,7 +208,10 @@ MonoBehaviour:
   - nameStr: "\uC18C\uB9842"
     uid: 9
     stringDropdownClass: {fileID: 11400000}
-  currentUidNum: 10
+  - nameStr: "\uC2AC\uB77C\uC774\uB529"
+    uid: 10
+    stringDropdownClass: {fileID: 11400000}
+  currentUidNum: 11
   isDataChanged: 0
   isMustScriptGenerate: 0
   dataTypeStr: SfxType

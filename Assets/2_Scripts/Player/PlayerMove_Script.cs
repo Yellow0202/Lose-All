@@ -76,6 +76,7 @@ public class PlayerMove_Script : MonoBehaviour
             this._anim.SetTrigger("Silde_On");
             this.is_SlidingOn = true;
 
+            SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.슬라이딩);
             this._slidingParticle.transform.position = new Vector2(this.transform.position.x, this._slidingParticle.transform.position.y);
             this._slidingParticle.Play();
         }

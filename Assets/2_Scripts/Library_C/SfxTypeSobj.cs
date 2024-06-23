@@ -34,6 +34,7 @@ public partial struct SfxType
     public const int 함정카드 = 7;
     public const int 소름1 = 8;
     public const int 소름2 = 9;
+    public const int 슬라이딩 = 10;
 
 #if UNITY_EDITOR
     private IEnumerable GetIEnumerable => SfxTypeSobj.Instance.GetIEnumerable;
