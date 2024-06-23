@@ -10,6 +10,9 @@ public class ProjectBackEnd_Manager : BackEnd_Manager
 
     public static string s_playerName;
 
+    public string project_tableName = null;
+    public string project_gameDataColumn = null;
+
     public override void Init_Func(int _layer)
     {
         base.Init_Func(_layer);
@@ -76,7 +79,7 @@ public class ProjectBackEnd_Manager : BackEnd_Manager
             }
         }
 
-        this.SetRank_Func(this.rankUuid, this.tableName, this.gameDataColumn, a_Score);
+        this.SetRank_Func(this.rankUuid, this.project_tableName, this.project_gameDataColumn, a_Score);
     }
 
 }
