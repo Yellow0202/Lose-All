@@ -117,7 +117,7 @@ MonoBehaviour:
   - Define_3
   _item_Falling_Speed: 1
   _item_Spawn_CoolTime: 3
-  item_Spawn_CoolTime: 3
+  item_Spawn_CoolTime: 1
   _item_Spawn_Count: 0
   _item_Horror_Vlaue: 10
   _enemy_MoveSpeed: 5

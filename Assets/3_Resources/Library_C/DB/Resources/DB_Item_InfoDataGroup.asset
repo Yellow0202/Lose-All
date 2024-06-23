@@ -373,13 +373,13 @@ MonoBehaviour:
       Data: Item_10010
     - Name: Item_Rare
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: Name
       Entry: 1
       Data: Item_Name_9
     - Name: Comment
       Entry: 1
-      Data: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
+      Data: "\uAC8C\uC784\uAE30"
     - Name: IntKey
       Entry: 3
       Data: 10010
@@ -409,7 +409,7 @@ MonoBehaviour:
       Data: Item_10011
     - Name: Item_Rare
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: Name
       Entry: 1
       Data: Item_Name_10
@@ -502,14 +502,14 @@ MonoBehaviour:
     ItemScore: 11800
     Mass: 1.8
   - Key: Item_10010
-    Item_Rare: 2
+    Item_Rare: 3
     Name: Item_Name_9
-    Comment: "\uAC8C\uC784\uAE30 \uC870\uC774\uC2A4\uD2F1"
+    Comment: "\uAC8C\uC784\uAE30"
     IntKey: 10010
     ItemScore: 50000
     Mass: 2
   - Key: Item_10011
-    Item_Rare: 3
+    Item_Rare: 2
     Name: Item_Name_10
     Comment: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
     IntKey: 10011
