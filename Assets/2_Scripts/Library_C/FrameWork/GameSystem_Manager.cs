@@ -39,6 +39,7 @@ public class GameSystem_Manager : Cargold.FrameWork.GameSystem_Manager
         }
     }
 
+    public bool skipOpenning = false;
 
     private Dictionary<Type, MonoBehaviour> monoSingletons = new();
 
