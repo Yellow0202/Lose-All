@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using BackEnd;
+using Cargold;
 
 public class ProjectBackEnd_Manager : BackEnd_Manager
 {
@@ -28,6 +30,60 @@ public class ProjectBackEnd_Manager : BackEnd_Manager
         else if (_layer == 2)
         {
             
+        }
+    }
+
+    public void OnSignUp_Func(string _id, string _password, out bool is_Success)
+    {
+        Debug_C.Log_Func($"{_id} 회원가입을 요청합니다.");
+
+        BackendReturnObject _bro = Backend.BMember.CustomSignUp(_id, _password);
+
+        is_Success = _bro.IsSuccess();
+
+        if (_bro.IsSuccess() == true)
+        {
+            Debug_C.Log_Func($"회원가입에 성공했습니다. : {_bro}");
+        }
+        else
+        {
+            Debug_C.Error_Func($"회원가입에 실패했습니다. : {_bro}");
+        }
+    }
+
+    public void OnLogin_Func(string _id, string _password, out bool is_Success)
+    {
+        Debug_C.Log_Func($"{_id} 로그인을 시도합니다.");
+
+        BackendReturnObject _bro = Backend.BMember.CustomLogin(_id, _password);
+
+        is_Success = _bro.IsSuccess();
+
+        if (_bro.IsSuccess() == true)
+        {
+            Debug_C.Log_Func($"로그인에 성공했습니다. : {_bro}");
+        }
+        else
+        {
+            Debug_C.Error_Func($"로그인에 실패했습니다. : {_bro}");
+        }
+    }
+
+    public void SetNickname_Func(string _nickname, out bool is_Success)
+    {
+        Debug_C.Log_Func($"{_nickname} 닉네임 변경을 시도합니다.");
+
+        BackendReturnObject _bro = Backend.BMember.UpdateNickname(_nickname);
+
+        is_Success = _bro.IsSuccess();
+
+        if (_bro.IsSuccess() == true)
+        {
+            Debug_C.Log_Func($"닉네임 변경에 성공했습니다. : {_bro}");
+        }
+        else
+        {
+            Debug_C.Error_Func($"닉네임 변경에 실패했습니다. : {_bro}");
         }
     }
 
