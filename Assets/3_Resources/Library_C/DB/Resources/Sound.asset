@@ -40,7 +40,7 @@ MonoBehaviour:
     sfxType:
       ID: 1
   - clip: {fileID: 8300000, guid: 8ca46cc96c3d62843bb33dd9b845b5dd, type: 3}
-    volume: 0.8
+    volume: 0.90163934
     sfxType:
       ID: 2
   - clip: {fileID: 8300000, guid: bc20126972ae8e74e9f225bcc53114f2, type: 3}

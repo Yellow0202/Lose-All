@@ -136,6 +136,7 @@ public class UI_Result : MonoSingleton<UI_Result>
         SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.ÅÍÄ¡À½);
         SoundChild_Script.Instance.Stop_Bgm_Func();
         UserSystem_Manager.Instance.playInfo.Set_ReSetPlayInfo_Func();
+        EnemySystem_Manager.Instance.ReSet_Enemy_Func();
         SceneManager.LoadScene("InGame");
     }
 

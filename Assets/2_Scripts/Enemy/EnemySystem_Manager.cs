@@ -47,6 +47,12 @@ public class EnemySystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Ga
         this._curSpawnEnemyCount++;
     }
 
+    public void ReSet_Enemy_Func()
+    {
+        this._curGetScoreValue = 0;
+        this._curItemSpawnCoolTimeDownScore = DataBase_Manager.Instance.GetTable_Define.difficulty_SpawnCoolTimeDownCondition;
+    }
+
     public void Check_EnemySpawnCondition_Func()
     {
         if (DataBase_Manager.Instance.GetTable_Define.enemy_SpawnMaxCount <= this._curSpawnEnemyCount)

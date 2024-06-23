@@ -385,7 +385,7 @@ MonoBehaviour:
       Data: 10010
     - Name: ItemScore
       Entry: 3
-      Data: 50000
+      Data: 45000
     - Name: Mass
       Entry: 4
       Data: 2
@@ -421,7 +421,7 @@ MonoBehaviour:
       Data: 10011
     - Name: ItemScore
       Entry: 3
-      Data: -6000
+      Data: -7000
     - Name: Mass
       Entry: 4
       Data: 1.5
@@ -506,14 +506,14 @@ MonoBehaviour:
     Name: Item_Name_9
     Comment: "\uAC8C\uC784\uAE30"
     IntKey: 10010
-    ItemScore: 50000
+    ItemScore: 45000
     Mass: 2
   - Key: Item_10011
     Item_Rare: 2
     Name: Item_Name_10
     Comment: "\uC695\uB9DD\uC758 \uD56D\uC544\uB9AC"
     IntKey: 10011
-    ItemScore: -6000
+    ItemScore: -7000
     Mass: 1.5
   keyArr:
   - Item_10001

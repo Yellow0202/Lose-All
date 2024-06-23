@@ -875,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2723588534978078573, guid: c164df472aeaf9343a1264556c62cfee, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2983855957468590458, guid: c164df472aeaf9343a1264556c62cfee, type: 3}
       propertyPath: m_PreserveAspect
