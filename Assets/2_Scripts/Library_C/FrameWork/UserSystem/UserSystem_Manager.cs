@@ -146,7 +146,7 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
 
         public void Set_SmashedScorePlayInfo_Func(int a_Score)
         {
-            this.GetData.smashedScore += a_Score;
+            this.GetData.smashedScore -= a_Score;
         }
 
         public void Set_SmashedItemCountPlayInfo_Func()

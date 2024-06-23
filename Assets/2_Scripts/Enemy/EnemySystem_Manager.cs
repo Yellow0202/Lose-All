@@ -13,18 +13,19 @@ public class EnemySystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Ga
     [SerializeField, LabelText("사촌동생 생성 조건"), ReadOnly] private int _enemySpawnCondition => DataBase_Manager.Instance.GetTable_Define.enemy_SpawnCondition;
     [SerializeField, LabelText("현재 조건"), ReadOnly] private int _curEnemySpawnCondition;
 
-    [LabelText("소환된 사촌동생 수")] private int _curSpawnEnemyCount;
+    [SerializeField, LabelText("소환된 사촌동생 수"), ReadOnly] private int _curSpawnEnemyCount;
 
     //2만 5천원을 벌었는지를 찾고. 벌었으면 0.2초 감소. 사촌동생이 소환되면 조건 금액이 5천원 줄어듦.
     //최대 1초까지 감소. 최대 감소는 DB에서 조정할 것.
-    [LabelText("투척시간 감소용 누적 금액")] private int _curGetScoreValue;
-    [LabelText("현재 투척시간 감소 금액")] private int _curItemSpawnCoolTimeDownScore;
+    [SerializeField, LabelText("투척시간 감소용 누적 금액"), ReadOnly] private int _curGetScoreValue;
+    [SerializeField, LabelText("현재 투척시간 감소 금액"), ReadOnly] private int _curItemSpawnCoolTimeDownScore;
 
     public void Init_Func(int _layer)
     {
         if (_layer == 0)
         {
             Instance = this;
+            this.ReSet_Enemy_Func();
         }
         else if (_layer == 1)
         {
@@ -50,6 +51,8 @@ public class EnemySystem_Manager : SerializedMonoBehaviour, Cargold.FrameWork.Ga
     public void ReSet_Enemy_Func()
     {
         this._curGetScoreValue = 0;
+        this._curSpawnEnemyCount = 0;
+        this._curEnemySpawnCondition = this._enemySpawnCondition;
         this._curItemSpawnCoolTimeDownScore = DataBase_Manager.Instance.GetTable_Define.difficulty_SpawnCoolTimeDownCondition;
     }
 

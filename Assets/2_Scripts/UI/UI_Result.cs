@@ -137,6 +137,7 @@ public class UI_Result : MonoSingleton<UI_Result>
         SoundChild_Script.Instance.Stop_Bgm_Func();
         UserSystem_Manager.Instance.playInfo.Set_ReSetPlayInfo_Func();
         EnemySystem_Manager.Instance.ReSet_Enemy_Func();
+        DataBase_Manager.Instance.GetTable_Define.ReSet_ItemSpeendCoolTime_Func();
         SceneManager.LoadScene("InGame");
     }
 
