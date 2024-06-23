@@ -190,6 +190,12 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
             }
         }
 
+        public void Set_ReSet_Func()
+        {
+            this.GetData.userName = "";
+            this.GetData.userScore = 0;
+        }
+
         public void Set_UserNameData_Func(string a_UserName)
         {
             this.GetData.userName = a_UserName;

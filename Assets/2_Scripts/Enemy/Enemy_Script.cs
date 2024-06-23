@@ -90,7 +90,7 @@ public class Enemy_Script : MonoBehaviour
 
     private float Random_SpawnTime_Func()
     {
-        return Random.Range(0.1f, 0.3f);
+        return Random.Range(0.0f, 1.0f);
     }
 
     public void Spawn_ItemSpawn_Func()
