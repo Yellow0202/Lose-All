@@ -135,6 +135,7 @@ public class UI_Result : MonoSingleton<UI_Result>
     {
         SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.터치음);
         SoundChild_Script.Instance.Stop_Bgm_Func();
+        UserSystem_Manager.Instance.playInfo.Set_ReSetPlayInfo_Func();
         SceneManager.LoadScene("InGame");
     }
 
@@ -142,6 +143,7 @@ public class UI_Result : MonoSingleton<UI_Result>
     {
         SoundChild_Script.Instance.Play_SFXSound_Func(SfxType.터치음);
         SoundChild_Script.Instance.Stop_Bgm_Func();
+        UserSystem_Manager.Instance.playInfo.Set_ReSetPlayInfo_Func();
         SceneManager.LoadScene("Title");
     }
 
