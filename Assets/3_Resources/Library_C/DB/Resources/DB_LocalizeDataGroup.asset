@@ -280,7 +280,7 @@ MonoBehaviour:
       Data: Item_Name_7
     - Name: ko
       Entry: 1
-      Data: "\uAC74\uB2F4"
+      Data: "\uC751\uC6D0\uBD09"
     - Name: en
       Entry: 1
       Data: 
@@ -448,7 +448,7 @@ MonoBehaviour:
     Ch: 
     TW: 
   - Key: Item_Name_7
-    ko: "\uAC74\uB2F4"
+    ko: "\uC751\uC6D0\uBD09"
     en: 
     Jp: 
     Ch: 
