@@ -29,6 +29,38 @@ public partial class DB_Table_DefineDataGroup
     [SerializeField, FoldoutGroup("게임오버"), LabelText("손해 스코어")] private int _gameOverScoreMax; public int gameOverScoreMax => this._gameOverScoreMax;
     [SerializeField, FoldoutGroup("게임오버"), LabelText("파손 피규어")] private int _gameOverCountMax; public int gameOverCountMax => this._gameOverCountMax;
 
+
+    [SerializeField, FoldoutGroup("한글_스프라이트_타이틀"), LabelText("메인 배경")] private Sprite _ko_Title_Sprite_MainBack; public Sprite ko_Title_Sprite_MainBack => this._ko_Title_Sprite_MainBack;
+    [SerializeField, FoldoutGroup("한글_스프라이트_타이틀"), LabelText("메인 제목")] private Sprite _ko_Title_Sprite_MainTitle; public Sprite ko_Title_Sprite_MainTitle => this._ko_Title_Sprite_MainTitle;
+    [SerializeField, FoldoutGroup("한글_스프라이트_타이틀"), LabelText("게임시작 버튼")] private Sprite _ko_Title_Sprite_GameStartBtn; public Sprite ko_Title_Sprite_GameStartBtn => this._ko_Title_Sprite_GameStartBtn;
+    [SerializeField, FoldoutGroup("한글_스프라이트_타이틀"), LabelText("게임종료 버튼")] private Sprite _ko_Title_Sprite_GameClose; public Sprite ko_Title_Sprite_GameClose => this._ko_Title_Sprite_GameClose;
+    [SerializeField, FoldoutGroup("한글_스프라이트_타이틀"), LabelText("이름 선택 후 게임시작")] private Sprite _ko_Title_Sprite_InGameGoBtn; public Sprite ko_Title_Sprite_InGameGoBtn => this._ko_Title_Sprite_InGameGoBtn;
+
+    [SerializeField, FoldoutGroup("한글_스프라이트_인게임"), LabelText("튜토리얼")] private Sprite _ko_InGame_Sprite_TutorialBack; public Sprite ko_InGame_Sprite_TutorialBack => this._ko_InGame_Sprite_TutorialBack;
+    [SerializeField, FoldoutGroup("한글_스프라이트_인게임"), LabelText("튜토리얼 시작하기")] private Sprite _ko_InGame_Sprite_TutorialStart; public Sprite ko_InGame_Sprite_TutorialStart => this._ko_InGame_Sprite_TutorialStart;
+    [SerializeField, FoldoutGroup("한글_스프라이트_인게임"), LabelText("상단 스코어")] private Sprite _ko_InGame_Sprite_Score; public Sprite ko_InGame_Sprite_Score => this._ko_InGame_Sprite_Score;
+    [SerializeField, FoldoutGroup("한글_스프라이트_인게임"), LabelText("그만하기")] private Sprite _ko_InGame_Sprite_Close; public Sprite ko_InGame_Sprite_Close => this._ko_InGame_Sprite_Close;
+
+    [SerializeField, FoldoutGroup("한글_스프라이트_인게임_스코어"), LabelText("텍스트박스")] private Sprite _ko_Result_Sprite_TextBox; public Sprite ko_Result_Sprite_TextBox => this._ko_Result_Sprite_TextBox;
+    [SerializeField, FoldoutGroup("한글_스프라이트_인게임_스코어"), LabelText("다시하기")] private Sprite _ko_Result_Sprite_Retry; public Sprite ko_Result_Sprite_Retry => this._ko_Result_Sprite_Retry;
+    [SerializeField, FoldoutGroup("한글_스프라이트_인게임_스코어"), LabelText("그만하기")] private Sprite _ko_Result_Sprite_Close; public Sprite ko_Result_Sprite_Close => this._ko_Result_Sprite_Close;
+
+
+    [SerializeField, FoldoutGroup("영어_스프라이트_타이틀"), LabelText("메인 배경")] private Sprite _en_Title_Sprite_MainBack; public Sprite en_Title_Sprite_MainBack => this._en_Title_Sprite_MainBack;
+    [SerializeField, FoldoutGroup("영어_스프라이트_타이틀"), LabelText("메인 제목")] private Sprite _en_Title_Sprite_MainTitle; public Sprite en_Title_Sprite_MainTitle => this._en_Title_Sprite_MainTitle;
+    [SerializeField, FoldoutGroup("영어_스프라이트_타이틀"), LabelText("게임시작 버튼")] private Sprite _en_Title_Sprite_GameStartBtn; public Sprite en_Title_Sprite_GameStartBtn => this._en_Title_Sprite_GameStartBtn;
+    [SerializeField, FoldoutGroup("영어_스프라이트_타이틀"), LabelText("게임종료 버튼")] private Sprite _en_Title_Sprite_GameClose; public Sprite en_Title_Sprite_GameClose => this._en_Title_Sprite_GameClose;
+    [SerializeField, FoldoutGroup("영어_스프라이트_타이틀"), LabelText("이름 선택 후 게임시작")] private Sprite _en_Title_Sprite_InGameGoBtn; public Sprite en_Title_Sprite_InGameGoBtn => this._en_Title_Sprite_InGameGoBtn;
+
+    [SerializeField, FoldoutGroup("영어_스프라이트_인게임"), LabelText("튜토리얼")] private Sprite _en_InGame_Sprite_TutorialBack; public Sprite en_InGame_Sprite_TutorialBack => this._en_InGame_Sprite_TutorialBack;
+    [SerializeField, FoldoutGroup("영어_스프라이트_인게임"), LabelText("튜토리얼 시작하기")] private Sprite _en_InGame_Sprite_TutorialStart; public Sprite en_InGame_Sprite_TutorialStart => this._en_InGame_Sprite_TutorialStart;
+    [SerializeField, FoldoutGroup("영어_스프라이트_인게임"), LabelText("상단 스코어")] private Sprite _en_InGame_Sprite_Score; public Sprite en_InGame_Sprite_Score => this._en_InGame_Sprite_Score;
+    [SerializeField, FoldoutGroup("영어_스프라이트_인게임"), LabelText("그만하기")] private Sprite _en_InGame_Sprite_Close; public Sprite en_InGame_Sprite_Close => this._en_InGame_Sprite_Close;
+
+    [SerializeField, FoldoutGroup("영어_스프라이트_인게임_스코어"), LabelText("텍스트박스")] private Sprite _en_Result_Sprite_TextBox; public Sprite en_Result_Sprite_TextBox => this._en_Result_Sprite_TextBox;
+    [SerializeField, FoldoutGroup("영어_스프라이트_인게임_스코어"), LabelText("다시하기")] private Sprite _en_Result_Sprite_Retry; public Sprite en_Result_Sprite_Retry => this._en_Result_Sprite_Retry;
+    [SerializeField, FoldoutGroup("영어_스프라이트_인게임_스코어"), LabelText("그만하기")] private Sprite _en_Result_Sprite_Close; public Sprite en_Result_Sprite_Close => this._en_Result_Sprite_Close;
+
     protected override void Init_Project_Func()
     {
         base.Init_Project_Func();

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Sirenix.OdinInspector;
 using Cargold;
 using TMPro;
@@ -31,9 +32,22 @@ public class InGameUISystem_Manager : SerializedMonoBehaviour
 
     [SerializeField, FoldoutGroup("파티클"), LabelText("아이템 오브젝트 온오프 스타 파티클")] private ParticleSystem _particle_ItemObjOn; public ParticleSystem particle_ItemObjOn => this._particle_ItemObjOn;
 
+    [SerializeField, FoldoutGroup("언어 변경 창_인게임"), LabelText("튜토리얼 창")] private Image _InGame_TutorialView;
+    [SerializeField, FoldoutGroup("언어 변경 창_인게임"), LabelText("튜토리얼 창 시작 버튼")] private Image _InGame_TutorialStartBtn;
+    [SerializeField, FoldoutGroup("언어 변경 창_인게임"), LabelText("상단 스코어")] private Image _InGame_ScoreFrame;
+    [SerializeField, FoldoutGroup("언어 변경 창_인게임"), LabelText("게임종료 버튼")] private Image _InGame_CloseBtn;
+
+    [SerializeField, FoldoutGroup("언어 변경 창_스코어"), LabelText("내 점수 텍스트 박스")] private Image _Result_ScoreBox;
+    [SerializeField, FoldoutGroup("언어 변경 창_스코어"), LabelText("다시하기 버튼")] private Image _Result_RetryBtn;
+    [SerializeField, FoldoutGroup("언어 변경 창_스코어"), LabelText("그만하기 버튼")] private Image _Result_CloseBtn;
+
+    [LabelText("언어 변경 갯수 Str")] private string _scoreCountStr;
+
     private void Awake()
     {
         Instance = this;
+
+        this.LanguageChange_Func();
     }
 
 
@@ -84,6 +98,45 @@ public class InGameUISystem_Manager : SerializedMonoBehaviour
         s_GameState = GameState.Playing;
     }
 
+    private void LanguageChange_Func()
+    {
+        switch(UserSystem_Manager.Instance.GetUserData.langTypeID)
+        {
+            case (int)SystemLanguage.Korean:
+
+                this._InGame_TutorialView.sprite = DataBase_Manager.Instance.GetTable_Define.ko_InGame_Sprite_TutorialBack;
+                this._InGame_TutorialStartBtn.sprite = DataBase_Manager.Instance.GetTable_Define.ko_InGame_Sprite_TutorialStart;
+                this._InGame_ScoreFrame.sprite = DataBase_Manager.Instance.GetTable_Define.ko_InGame_Sprite_Score;
+                //this._InGame_CloseBtn.sprite = DataBase_Manager.Instance.GetTable_Define.ko_InGame_Sprite_Close;
+
+                this._Result_ScoreBox.sprite = DataBase_Manager.Instance.GetTable_Define.ko_Result_Sprite_TextBox;
+                this._Result_RetryBtn.sprite = DataBase_Manager.Instance.GetTable_Define.ko_Result_Sprite_Retry;
+                this._Result_CloseBtn.sprite = DataBase_Manager.Instance.GetTable_Define.ko_Result_Sprite_Close;
+
+                this._scoreCountStr = "개";
+
+                break;
+
+            case (int)SystemLanguage.English:
+
+                this._InGame_TutorialView.sprite = DataBase_Manager.Instance.GetTable_Define.en_InGame_Sprite_TutorialBack;
+                this._InGame_TutorialStartBtn.sprite = DataBase_Manager.Instance.GetTable_Define.en_InGame_Sprite_TutorialStart;
+                this._InGame_ScoreFrame.sprite = DataBase_Manager.Instance.GetTable_Define.en_InGame_Sprite_Score;
+                //this._InGame_CloseBtn.sprite = DataBase_Manager.Instance.GetTable_Define.en_InGame_Sprite_Close;
+
+                this._Result_ScoreBox.sprite = DataBase_Manager.Instance.GetTable_Define.en_Result_Sprite_TextBox;
+                this._Result_RetryBtn.sprite = DataBase_Manager.Instance.GetTable_Define.en_Result_Sprite_Retry;
+                this._Result_CloseBtn.sprite = DataBase_Manager.Instance.GetTable_Define.en_Result_Sprite_Close;
+
+                this._scoreCountStr = "pcs";
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
     private void Sound_BgnStart_Func()
     {
         SoundChild_Script.Instance.Start_InGameBgmSound_Func(BgmType.인게임BGMintro);
@@ -91,12 +144,12 @@ public class InGameUISystem_Manager : SerializedMonoBehaviour
 
     public void Score_Update_Func()
     {
-        this._ui_TotalScoreText.text = UserSystem_Manager.Instance.playInfo.Get_ScorePlayInfo_Func().ToString("N0") + "원";
+        this._ui_TotalScoreText.text = UserSystem_Manager.Instance.playInfo.Get_ScorePlayInfo_Func().ToString("N0") + "W";
     }
 
     public void SmashedScore_Update_Func()
     {
-        this._ui_TotalSmashedText.text = UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func().ToString("N0") + "원(" + UserSystem_Manager.Instance.playInfo.Get_SmashedItemCountPlayInfo_Func().ToString() + "개)";
+        this._ui_TotalSmashedText.text = UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func().ToString("N0") + "W(" + UserSystem_Manager.Instance.playInfo.Get_SmashedItemCountPlayInfo_Func().ToString() + this._scoreCountStr + ")";
 
         if (DataBase_Manager.Instance.GetTable_Define.gameOverScoreMax <= (UserSystem_Manager.Instance.playInfo.Get_SmashedScorePlayInfo_Func() * -1) ||
             DataBase_Manager.Instance.GetTable_Define.gameOverCountMax <= UserSystem_Manager.Instance.playInfo.Get_SmashedItemCountPlayInfo_Func())

@@ -130,4 +130,28 @@ MonoBehaviour:
   _difficulty_SpawnCoolTimeDownCondition: 25000
   _difficulty_SpawnCoolTimeDownConditionDownScore: 5000
   _gameOverScoreMax: 50000
-  _gameOverCountMax: 8
+  _gameOverCountMax: 1
+  _ko_Title_Sprite_MainBack: {fileID: 21300000, guid: b8f433c386c5a054393e17e81403a61c, type: 3}
+  _ko_Title_Sprite_MainTitle: {fileID: 21300000, guid: adb24cdf053cd3e49ada6f85a636848a, type: 3}
+  _ko_Title_Sprite_GameStartBtn: {fileID: 21300000, guid: dfb405c5f09604341b1fe56c8bd8d78c, type: 3}
+  _ko_Title_Sprite_GameClose: {fileID: 21300000, guid: ce3b4fe6f98c74b4ebf84bafc5885c1a, type: 3}
+  _ko_Title_Sprite_InGameGoBtn: {fileID: 21300000, guid: f4ec3bcfa962c864ba229af77e91284f, type: 3}
+  _ko_InGame_Sprite_TutorialBack: {fileID: 21300000, guid: 6383907b068a54644887eef812b4fa5e, type: 3}
+  _ko_InGame_Sprite_TutorialStart: {fileID: 21300000, guid: f4ec3bcfa962c864ba229af77e91284f, type: 3}
+  _ko_InGame_Sprite_Score: {fileID: 21300000, guid: 5690879374ca72c4f8fcab1cbee99db6, type: 3}
+  _ko_InGame_Sprite_Close: {fileID: 21300000, guid: 5df957e68f057f44b892804f55443b00, type: 3}
+  _ko_Result_Sprite_TextBox: {fileID: 21300000, guid: 9db437bb62ac4ed47b42aa872d468e8c, type: 3}
+  _ko_Result_Sprite_Retry: {fileID: 21300000, guid: f902475530548d34e9933551fac53fc4, type: 3}
+  _ko_Result_Sprite_Close: {fileID: 21300000, guid: db0e21b87778ebd458c2ff011fb4c9d7, type: 3}
+  _en_Title_Sprite_MainBack: {fileID: 21300000, guid: 97e39b90017215845abb724c90a1895e, type: 3}
+  _en_Title_Sprite_MainTitle: {fileID: 21300000, guid: 4b20c661cc92dce4c862f934e50536bd, type: 3}
+  _en_Title_Sprite_GameStartBtn: {fileID: 21300000, guid: c856f10904f4ad244916b929c19e2d30, type: 3}
+  _en_Title_Sprite_GameClose: {fileID: 21300000, guid: 609b04fc088300a49ac79ef817540c3f, type: 3}
+  _en_Title_Sprite_InGameGoBtn: {fileID: 21300000, guid: 0cdd9f732bb2d7f47998b9e433ef5ef9, type: 3}
+  _en_InGame_Sprite_TutorialBack: {fileID: 21300000, guid: 415742ee86ece7446b29ff60457af5c9, type: 3}
+  _en_InGame_Sprite_TutorialStart: {fileID: 21300000, guid: 0cdd9f732bb2d7f47998b9e433ef5ef9, type: 3}
+  _en_InGame_Sprite_Score: {fileID: 21300000, guid: d2c844cc0fdf6564d944dcd24189768f, type: 3}
+  _en_InGame_Sprite_Close: {fileID: 21300000, guid: 5d4baa764618a594a9afb339df06c7d5, type: 3}
+  _en_Result_Sprite_TextBox: {fileID: 21300000, guid: 91c0c6e3a5bf29544b07410cf7932216, type: 3}
+  _en_Result_Sprite_Retry: {fileID: 21300000, guid: 9b979e4a659a0af458a054507c39a1a4, type: 3}
+  _en_Result_Sprite_Close: {fileID: 21300000, guid: d792f6af4a3c2c74884e8a2d2d5271ef, type: 3}

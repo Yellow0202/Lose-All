@@ -8,7 +8,7 @@ using Cargold.FrameWork;
 
 public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
 {
-    public static new UserSystem_Manager Instance;
+    public static UserSystem_Manager Instance;
 
     [SerializeField] private UserData userData = null;
 
@@ -28,7 +28,8 @@ public class UserSystem_Manager : Cargold.FrameWork.UserSystem_Manager
 
         if(_layer == 0)
         {
-            Instance = this;
+            if(Instance == null)
+                Instance = this;
         }
 
         this.wealth.Init_Func(_layer);

@@ -49,13 +49,15 @@ public class UI_Result : MonoSingleton<UI_Result>
     }
 
     // Start is called before the first frame update
-    override protected void OnEnable()
+    //override protected void OnEnable()
+    //{
+    //    base.OnEnable();
+    //}
+
+    private void Start()
     {
-        base.OnEnable();
-
-        this.button_Retry.onClick.AddListener(Btn_ClickReStart_Func);
+                this.button_Retry.onClick.AddListener(Btn_ClickReStart_Func);
         this.button_Quit.onClick.AddListener(Btn_ClickGoToTitle_Func);
-
     }
 
     public void Result_RankingCall_Func()
@@ -84,7 +86,7 @@ public class UI_Result : MonoSingleton<UI_Result>
         ProjectBackEnd_Manager.Instance.GetRank_Func((a_TotalList) =>
         {
             this._rankList = a_TotalList;
-        });
+        }, 20);
 
         this.Result_RankingSlotSetting_Func();
     }
@@ -97,7 +99,11 @@ public class UI_Result : MonoSingleton<UI_Result>
         for (int i = 0; i < this._rankList.Count; i++)
         {
             if (this.rankingSlots.Length <= i)
+            {
+                Debug.Log("브레이크 카운트 : " + i);
                 break;
+            }
+
 
             if (this._rankList[i].nickname == this._nickName)
             {
@@ -114,6 +120,8 @@ public class UI_Result : MonoSingleton<UI_Result>
 
             this.rankingSlots[i].SetRanking(this._rankList[i].rank, this._rankList[i].nickname, this._rankList[i].value, is_MyData);
         }
+
+        Debug.Log("랭킹리스트 카운트 : " + this._rankList.Count);
 
         if(this._rankList.Count < this.rankingSlots.Length)
         {

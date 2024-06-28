@@ -2605,7 +2605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.1, y: -64.4}
+  m_AnchoredPosition: {x: 19.1, y: -66}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948942880
@@ -2628,7 +2628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "50,000\uC6D0(8\uAC1C)"
+  m_text: "1,000,000\uC6D0(8\uAC1C)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 476166dc03afdc14abe964e7e5f4aecf, type: 2}
   m_sharedMaterial: {fileID: -2219955867161010410, guid: 476166dc03afdc14abe964e7e5f4aecf, type: 2}
@@ -2655,12 +2655,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
+  m_fontSize: 18.1
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 16
+  m_fontSizeMax: 20
   m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
@@ -2872,7 +2872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002544873}
   - component: {fileID: 1002544875}
-  - component: {fileID: 1002544874}
+  - component: {fileID: 1002544876}
   m_Layer: 5
   m_Name: TutorialImg
   m_TagString: Untagged
@@ -2901,7 +2901,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1104, y: 719}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1002544874
+--- !u!222 &1002544875
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002544872}
+  m_CullTransparentMesh: 1
+--- !u!114 &1002544876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2910,7 +2918,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1002544872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2921,21 +2929,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 6383907b068a54644887eef812b4fa5e, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1002544875
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002544872}
-  m_CullTransparentMesh: 1
+  m_Sprite: {fileID: 21300000, guid: 6383907b068a54644887eef812b4fa5e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1017311383
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,6 +4606,13 @@ MonoBehaviour:
   _ui_CountDownText: {fileID: 1278735302}
   _playerMove_Script: {fileID: 1453202514}
   _particle_ItemObjOn: {fileID: 783601792}
+  _InGame_TutorialView: {fileID: 1002544876}
+  _InGame_TutorialStartBtn: {fileID: 1659592656}
+  _InGame_ScoreFrame: {fileID: 368949992}
+  _InGame_CloseBtn: {fileID: 0}
+  _Result_ScoreBox: {fileID: 8816871290750958913}
+  _Result_RetryBtn: {fileID: 5613455441896086313}
+  _Result_CloseBtn: {fileID: 157939113177369853}
 --- !u!4 &1416748200
 Transform:
   m_ObjectHideFlags: 0

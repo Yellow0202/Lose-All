@@ -8,35 +8,36 @@ using System;
 public class GameSystem_Manager : Cargold.FrameWork.GameSystem_Manager
 {
     static private GameSystem_Manager _instance;
-    static public GameSystem_Manager Instance
-    {
-        get
-        {
-            if (Exists() == false)
-            {
-                Debug.LogError("GameSystem_Manager doesn't exists!");
-            }
-            return _instance;
-        }
+    static public GameSystem_Manager Instance;
+    //{
+    //    get
+    //    {
+    //        if (Exists() == false)
+    //        {
+    //            Debug.LogError("GameSystem_Manager doesn't exists!");
+    //        }
+    //        return _instance;
+    //    }
 
-    }
-    static public bool Exists() { return _instance != null; }
+    //}
 
+    static public bool Exists() { return Instance != null; }
 
     protected override void Init_Func()
     {
-        base.Init_Func();
-
         // 프로젝트가 시작되면 가장 먼저 호출되는 곳입니다.
 
-        if (Exists() == false)
+        if (Instance == false)
         {
-            _instance = this;
+            Instance = this;
         }
         else
         {
-            Destroy(this);
+            if(Instance != this)
+                Destroy(this.gameObject);
         }
+
+        base.Init_Func();
     }
 
     public bool skipOpenning = false;
@@ -72,10 +73,10 @@ public class GameSystem_Manager : Cargold.FrameWork.GameSystem_Manager
         return ! alreadyExists;
     }
 
-    public void UnregistMonoSingleton<T>()
-    {
-        monoSingletons.Remove(typeof(T));
-    }
+    //public void UnregistMonoSingleton<T>()
+    //{
+    //    monoSingletons.Remove(typeof(T));
+    //}
 
     public T GetMonoSingleton<T>() where T : MonoSingleton<T>
     {

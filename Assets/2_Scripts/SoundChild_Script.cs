@@ -19,7 +19,8 @@ public class SoundChild_Script : SoundSystem_Manager
 
         if(_layer == 0)
         {
-            Instance = this;
+            if(Instance == null)
+                Instance = this;
         }
     }
 
